@@ -1,6 +1,9 @@
 # KiedyPociag
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+1. Download PDF timetable
+2. Open in Word and copy all tables as they are into Excel
+3. Save this as csv file
+4. Run timetable/fix_csv.py to generate proper csv file
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
