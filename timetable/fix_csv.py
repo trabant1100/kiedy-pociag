@@ -15,45 +15,100 @@ print 'Fixing file {} to output file {}'.format(srcname, dstname)
 
 data = list(csv.reader(open(srcname), delimiter=';'))
 
+namesplit = {
+    'Warszawa Zachodnia Warszawa Ochota': ['Warszawa Zachodnia', 'Warszawa Ochota'],
+    'Warszawa Powiœle Warszawa Stadion': ['Warszawa Powiœle', 'Warszawa Stadion'],
+    'Halinów Cisie': ['Halinów', 'Cisie'],
+    'Miñsk Maz. Anielina Barcz¹ca': ['Miñsk Maz. Anielina', 'Barcz¹ca'],
+    'Mienia Ceg³ów': ['Mienia', 'Ceg³ów'],
+    'Sosnowe Koszewnica': ['Sosnowe', 'Koszewnica'],
+    'Kotuñ Sabinka': ['Kotuñ', 'Sabinka'],
+    'Dziewule Radomyœl': ['Dziewule', 'Radomyœl'],
+    'Radomyœl Dziewule': ['Radomyœl', 'Dziewule'],
+    'Borki Kosy Kosiorki': ['Borki Kosy', 'Kosiorki'],
+    'Koszewnica Sosnowe': ['Koszewnica', 'Sosnowe'],
+    'Ceg³ów Mienia': ['Ceg³ów', 'Mienia'],
+    'Sabinka Kotuñ': ['Sabinka', 'Kotuñ'],
+    'Nowe Dêbe Wielkie Dêbe Wielkie': ['Nowe Dêbe Wielkie', 'Dêbe Wielkie'],
+    'Sulejówek Mi³osna Sulejówek': ['Sulejówek Mi³osna', 'Sulejówek'],
+    'W-wa Wola Grzybowska W-wa Weso³a': ['W-wa Wola Grzybowska', 'W-wa Weso³a'],
+    'Warszawa Stadion Warszawa Powiœle': ['Warszawa Stadion', 'Warszawa Powiœle'],
+    'Warszawa Zachodnia Warszawa Ochota': ['Warszawa Zachodnia', 'Warszawa Ochota'],
+}
+
+names = [
+    'Warszawa Zachodnia',
+'Warszawa Ochota',
+'Warszawa Œródmieœcie',
+'Warszawa Centralna',
+'Warszawa Powiœle',
+'Warszawa Stadion',
+'Warszawa Wschodnia',
+'Warszawa Rembertów',
+'W-wa Weso³a',
+'W-wa Wola Grzybowska',
+'Sulejówek',
+'Sulejówek Mi³osna',
+'Halinów',
+'Cisie',
+'Dêbe Wielkie',
+'Nowe Dêbe Wielkie',
+'Wrzosów',
+'Miñsk Maz.',
+'Miñsk Maz. Anielina',
+'Barcz¹ca',
+'Mienia',
+'Ceg³ów',
+'Mrozy',
+'Grodziszcze Maz.',
+'Sosnowe',
+'Koszewnica',
+'Kotuñ',
+'Sabinka',
+'Siedlce Zach.',
+'Siedlce',
+'Siedlce Wschodnie',
+'Bia³ki Siedleckie',
+'Kosiorki',
+'Borki Kosy',
+'Dziewule',
+'Radomyœl',
+'Krynka £ukowska',
+'£uków',
+]
+
+# states
+BLANK, LINE, NUMBER, FREQ, HOUR = range(0, 5)
+
+state = BLANK
+outdata = list()
 for y, line in enumerate(data):
+    if line[3] == 'R2':
+        state = LINE
+    elif state < HOUR and state != BLANK:
+        state += 1
+    else:
+        state = BLANK
     for x, val in enumerate(line):
-        if val == 'Warszawa Zachodnia Warszawa Ochota':
+        if re.match(r'\d\d:\d\d', val):
+            state = HOUR
+            break
+    for x, val in enumerate(line):
+        if val in namesplit:
             print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Warszawa Zachodnia'
-            data[y+1][x] = 'Warszawa Ochota'
-        elif val == 'Warszawa Powiœle Warszawa Stadion':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Warszawa Powiœle'
-            data[y+1][x] = 'Warszawa Stadion'
-        elif val == 'Halinów Cisie':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Halinów'
-            data[y+1][x] = 'Cisie'
-        elif val == 'Miñsk Maz. Anielina Barcz¹ca':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Miñsk Maz. Anielina'
-            data[y+1][x] = 'Barcz¹ca'
-        elif val == 'Mienia Ceg³ów':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Mienia'
-            data[y+1][x] = 'Ceg³ów'
-        elif val == 'Sosnowe Koszewnica':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Sosnowe'
-            data[y+1][x] = 'Koszewnica'
-        elif val == 'Kotuñ Sabinka':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Kotuñ'
-            data[y+1][x] = 'Sabinka'
-        elif val == 'Dziewule Radomyœl':
-            print 'FIX #1 row {}\tcolumn\t{}\t{}'.format(y, x, val)
-            line[x] = 'Dziewule'
-            data[y+1][x] = 'Radomyœl'
+            line[x] = namesplit[val][0]
+            data[y+1][x] = namesplit[val][1]
         elif re.match(r'\d\d:\d\d\s<', val):
             print 'FIX #2 row {}\tcolumn\t{}\t{}'.format(y, x, val)
             line[x] = val[:5]
             data[y+1][x] = val[5:]
-        
+        elif x == 1 and val not in names and val != '' and state == HOUR:
+            raise ValueError('Unknown station {}\tcolumn\t{}\t{}\tstate\t{}'.format(y, x, val, state))
+    if line[1] in names and data[y+1][1] == '' and data[y+1][3] != 'R2':
+        data[y+1][1] = line[1]
+    if state != BLANK:
+        outdata.append(line[1:]) 
+
 wr = csv.writer(open(dstname, 'wb'), delimiter=';')
-wr.writerows(data)
+wr.writerows(outdata)
 print 'Saved file {}'.format(dstname)
