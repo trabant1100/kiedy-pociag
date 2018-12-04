@@ -4,6 +4,8 @@
 2. Open in Word and copy all tables as they are into Excel
 3. Save this as csv file
 4. Run timetable/fix_csv.py to generate proper csv file
+5. Convert (manually for now) generated csv to utf-8 encoding
+6. Run timetable/create_json.py to generate json file
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
