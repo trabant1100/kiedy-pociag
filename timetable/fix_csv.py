@@ -33,7 +33,6 @@ namesplit = {
     'Sulejówek Mi³osna Sulejówek': ['Sulejówek Mi³osna', 'Sulejówek'],
     'W-wa Wola Grzybowska W-wa Weso³a': ['W-wa Wola Grzybowska', 'W-wa Weso³a'],
     'Warszawa Stadion Warszawa Powiœle': ['Warszawa Stadion', 'Warszawa Powiœle'],
-    'Warszawa Zachodnia Warszawa Ochota': ['Warszawa Zachodnia', 'Warszawa Ochota'],
 }
 
 names = [
@@ -83,7 +82,7 @@ BLANK, LINE, NUMBER, FREQ, HOUR = range(0, 5)
 state = BLANK
 outdata = list()
 for y, line in enumerate(data):
-    if line[3] == 'R2':
+    if re.match(r'R\d', line[3]):
         state = LINE
     elif state < HOUR and state != BLANK:
         state += 1
@@ -104,10 +103,28 @@ for y, line in enumerate(data):
             data[y+1][x] = val[5:]
         elif x == 1 and val not in names and val != '' and state == HOUR:
             raise ValueError('Unknown station {}\tcolumn\t{}\t{}\tstate\t{}'.format(y, x, val, state))
-    if line[1] in names and data[y+1][1] == '' and data[y+1][3] != 'R2':
+    if line[1] in names and data[y+1][1] == '' and not re.match(r'R\d', data[y+1][3]):
         data[y+1][1] = line[1]
     if state != BLANK:
         outdata.append(line[1:]) 
+
+for y, line in enumerate(outdata):
+    if re.match(r'R\d', line[2]):
+        outdata[y][0] = '__BEGIN__'
+
+'''partitioned = []
+lineslen = []
+for y, line in enumerate(outdata):
+    if line[0] == '__BEGIN__':
+       part = []
+       partitioned.append(part)
+    part.append(line)
+    lineslen.append(len(line))
+
+assert all(l == lineslen[0] for l in lineslen)
+#assert all(p == len(partitioned[0]) for p in map(lambda lst: len(lst), partitioned))
+for part in partitioned:
+    print len(part)'''
 
 wr = csv.writer(open(dstname, 'wb'), delimiter=';')
 wr.writerows(outdata)
