@@ -27,6 +27,9 @@ for y, line in enumerate(data):
        part = []
        partitioned.append(part)
     part.append(line)
+    '''for val in line:
+        val = val.replace('\\xc2\\xa0', '')
+        val = val.replace('\\u00a0', '')'''
     lineslen.append(len(line))
 
 assert all(l == lineslen[0] for l in lineslen)
@@ -50,11 +53,20 @@ def parsepart(part):
         for x, val in enumerate(line):
             if x < 4:
                 continue
-            station = {
-                'name': part[0][x],
-                'time': val
-            }
-            train['stations'].append(station)
+            val = val.strip()
+            if val != '' and not re.match(r'\d\d:\d\d', val):
+                val = '|'
+            name = part[0][x]
+            prevstation = train['stations'][-1] if len(train['stations']) > 0 else {'name': '', 'time': ''}
+            if prevstation['name'] == name and prevstation['time'] != val:
+                if re.match(r'\d\d:\d\d', prevstation['time']):
+                    prevstation['time2'] = val
+            else:
+                station = {
+                    'name': part[0][x],
+                    'time': val
+                }
+                train['stations'].append(station)
         trains.append(train)
     return trains
 
