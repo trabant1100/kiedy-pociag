@@ -30,7 +30,12 @@
                 "output": "/"
               },
               {
-                "glob": "**/*",
+                "glob": "out.json",
+                "input": "./timetable/",
+                "output": "/assets/"
+              },
+              {
+                "glob": "stations.json",
                 "input": "./timetable/",
                 "output": "/assets/"
               },
