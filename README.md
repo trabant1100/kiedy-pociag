@@ -6,6 +6,7 @@
 4. Run timetable/fix_csv.py to generate proper csv file
 5. Convert (manually for now) generated csv to utf-8 encoding
 6. Run timetable/create_json.py to generate json file
+7. Run timetable/create_stations_json to generate stations json file
 
 ## Development server
 
