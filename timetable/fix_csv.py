@@ -103,7 +103,7 @@ for y, line in enumerate(data):
             data[y+1][x] = val[5:]
         elif x == 1 and val not in names and val != '' and state == HOUR:
             raise ValueError('Unknown station {}\tcolumn\t{}\t{}\tstate\t{}'.format(y, x, val, state))
-    if line[1] in names and data[y+1][1] == '' and not re.match(r'R\d', data[y+1][3]):
+    if line[1] in names and (y+1) < len(data) and data[y+1][1] == '' and not re.match(r'R\d', data[y+1][3]):
         data[y+1][1] = line[1]
     if state != BLANK:
         outdata.append(line[1:]) 
