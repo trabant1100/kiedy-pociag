@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { StationCoord } from './stationcoord';
+import 'geolib';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,6 @@ export class StationCoordService {
   constructor(private http: HttpClient) { }
 
   getStationCoords() {
-    return this.http.get<StationCoord>(this.stationUrl);
-  }
+    return this.http.get<StationCoord>(this.stationUrl).toPromise();
+  }  
 }

@@ -11,6 +11,6 @@ export class TimetableService {
   constructor(private http: HttpClient) { }
 
   getTimetable() {
-    return this.http.get<Timetable>(this.timetableUrl);
+    return this.http.get<Timetable>(this.timetableUrl).toPromise();
   }
 }
