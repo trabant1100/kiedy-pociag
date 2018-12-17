@@ -43,70 +43,70 @@ export class TimetableService {
         result = true;
       }
       if (num == '19841') {
-        if (comments.includes('[1]') && this.isDayAndMonth(14, 1, date)) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonth(14, 1, date);
         }
-        if (comments.includes('[2]') && (!this.isDayAndMonth(14, 1, date) && working)) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = !this.isDayAndMonth(14, 1, date) && working;
         }
       } else if (num == 'BOLIMEK') {
-        if (comments.includes('[1]') && this.isDayAndMonthBetween(11, 12, 18, 12, date)) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthBetween(11, 12, 18, 12, date);
         }
-        if (comments.includes('[2]') && (!this.isDayAndMonthBetween(11, 12, 14, 12, date) && !this.isDayAndMonthBetween(17, 12, 18, 12, date) && working)) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = (!this.isDayAndMonthBetween(11, 12, 14, 12, date) && !this.isDayAndMonthBetween(17, 12, 18, 12, date) && working);
         }
       } else if (num == '93862/3') {
-        if (comments.includes('[1]') && this.isDayAndMonthAfter(18, 12, date) && working) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthAfter(18, 12, date) && working;
         }
-        if (comments.includes('[2]') && this.isDayAndMonthBefore(17, 12, date) && working) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = this.isDayAndMonthBefore(17, 12, date) && working;
         }
       } else if (num == '19877') {
-        if (comments.includes('[3]') && ((day in [this.FRI, this.SUN]) || this.isDayAndMonth(22, 12, date) || this.isDayAndMonth(26, 12, date))) {
-          result = true;
+        if (comments.includes('[3]')) {
+          result = (day in [this.FRI, this.SUN]) || this.isDayAndMonth(22, 12, date) || this.isDayAndMonth(26, 12, date);
         }
-        if (comments.includes('[4]') && (day in [this.MON, this.TUE, this.WED, this.THU, this.SAT]) && !this.isDayAndMonth(22, 12, date) && !this.isDayAndMonth(26, 12, date)) {
-          result = true;
+        if (comments.includes('[4]')) {
+          result = (day in [this.MON, this.TUE, this.WED, this.THU, this.SAT]) && !this.isDayAndMonth(22, 12, date) && !this.isDayAndMonth(26, 12, date);
         }
       } else if (num == '93450/1') {
-        if (comments.includes('[1]') && this.isDayAndMonthAfter(15, 1, date) && working) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthAfter(15, 1, date) && working;
         }
-        if (comments.includes('[1]') && this.isDayAndMonthBefore(11, 1, date) && working) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthBefore(11, 1, date) && working;
         }
       } else if (num in ['93450/1', '91800/1', '91590/1']) {
-        if ((comments.includes('[3]') || comments.includes('[4]')) && day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT]) {
-          result = true;
+        if ((comments.includes('[3]') || comments.includes('[4]'))) {
+          result = day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT];
         }
       } else if (num == '93400/1') {
-        if (comments.includes('[1]') && this.isDayAndMonth(14, 1, date) && working) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonth(14, 1, date) && working;
         }
-        if (comments.includes('[2]') && this.isDayAndMonthBefore(11, 1, date) && working) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = this.isDayAndMonthBefore(11, 1, date) && working;
         }
       } else if (num == '12890/1') {
-        if (comments.includes('[3]') && (day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT])) {
-          result = true;
+        if (comments.includes('[3]')) {
+          result = day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT];
         }
       } else if (num == '93460/1') {
-        if (comments.includes('[4]') && this.isDayAndMonthBefore(14, 1, date) && working) {
-          result = true;
+        if (comments.includes('[4]')) {
+          result = this.isDayAndMonthBefore(14, 1, date) && working;
         }
       } else if (num in ['93460/1', '93942/3']) {
-        if (comments.includes('[1]') && this.isDayAndMonthAfter(15, 1, date)) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthAfter(15, 1, date);
         }
       } else if (num == '11852') {
-        if (comments.includes('[2]') && day == this.SUN) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = day == this.SUN;
         }
       } else if (num == '93942/3') {
-        if (comments.includes('[3]') && this.isDayAndMonthBefore(14, 1, date) && working) {
-          result = true;
+        if (comments.includes('[3]')) {
+          result = this.isDayAndMonthBefore(14, 1, date) && working;
         }
       } else if (num == '91818/9') {
         // TODO - error!!!
@@ -114,28 +114,28 @@ export class TimetableService {
           result = true;
         }
       } else if (num == '93312/3') {
-        if (comments.includes('[1]') && ((day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT] && !holiday)
-          || this.isDayAndMonth(23, 12, date) || this.isDayAndMonth(25, 12, date) || this.isDayAndMonth(30, 12, date))) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = ((day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT] && !holiday)
+            || this.isDayAndMonth(23, 12, date) || this.isDayAndMonth(25, 12, date) || this.isDayAndMonth(30, 12, date));
         }
       } else if (num == '91234') {
-        if (comments.includes('[2]') && ((day == this.SUN || this.isDayAndMonth(26, 12, date) || this.isDayAndMonth(1, 1, date))
-          && !this.isDayAndMonth(23, 12, date) && !this.isDayAndMonth(30, 12, date))) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = ((day == this.SUN || this.isDayAndMonth(26, 12, date) || this.isDayAndMonth(1, 1, date))
+            && !this.isDayAndMonth(23, 12, date) && !this.isDayAndMonth(30, 12, date));
         }
       } else if (num == '91824') {
-        if (comments.includes('[1]') && this.isDayAndMonthAfter(15, 1, date) && working) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthAfter(15, 1, date) && working;
         }
-        if (comments.includes('[2]') && this.isDayAndMonthBefore(14, 1, date) && working) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = this.isDayAndMonthBefore(14, 1, date) && working;
         }
       } else if (num == '91848/9') {
-        if (comments.includes('[1]') && this.isDayAndMonthBefore(8, 3, date)) {
-          result = true;
+        if (comments.includes('[1]')) {
+          result = this.isDayAndMonthBefore(8, 3, date);
         }
-        if (comments.includes('[2]') && this.isDayAndMonth(9, 3, date)) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = this.isDayAndMonth(9, 3, date);
         }
       }
 
