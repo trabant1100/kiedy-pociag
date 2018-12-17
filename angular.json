@@ -78,10 +78,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "kiedy-pociag:build",
-            "sslKey": "server.key",
-            "sslCert": "server.crt",
-            "ssl": true
+            "browserTarget": "kiedy-pociag:build"
           },
           "configurations": {
             "production": {

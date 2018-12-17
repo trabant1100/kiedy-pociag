@@ -39,7 +39,7 @@ export class AppComponent {
       this.timetable = new TimetableDecorator(data).DecoratedTimetable;
       this.stationService.getStationCoords().then((data: StationCoord) => {
         this.stationCoord = data;
-        this.startTracking();
+        this.updatePositionAndGetTrains();
       });
     });
   }
@@ -48,9 +48,13 @@ export class AppComponent {
     this.date = new Date(this.date);
     this.date.setHours(this.time.hour);
     this.date.setMinutes(this.time.minute);
-    this.availableTrains.length = 0; this.availableTrains.push(...this.getAvailableTrains(this.date));
-    this.availableTrainsWwa.length = 0; this.availableTrainsWwa = this.getAvailableTrainsWwa();
-    this.availableTrainsWwa.length = 0; this.availableTrainsWwa = this.getAvailableTrainsLuk();
+    this.geolocationService.getCurrentPosition((lat: number, long: number) => {
+      this.lat = lat;
+      this.long = long;
+      this.availableTrains.length = 0; this.availableTrains.push(...this.getAvailableTrains(this.date));
+      this.availableTrainsWwa.length = 0; this.availableTrainsWwa = this.getAvailableTrainsWwa();
+      this.availableTrainsLuk.length = 0; this.availableTrainsLuk = this.getAvailableTrainsLuk();
+    });
   }
 
   getStationFromTrain(train: TrainEntity, stationName: string): StationEntity {
@@ -105,8 +109,8 @@ export class AppComponent {
       });
   }
 
-  private startTracking() {
-    this.geolocationService.startTracking((lat: number, long: number) => {
+  private updatePositionAndGetTrains() {
+    this.geolocationService.getCurrentPosition((lat: number, long: number) => {
       this.lat = lat;
       this.long = long;
       this.availableTrains = this.getAvailableTrains(this.date);
