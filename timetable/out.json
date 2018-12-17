@@ -173,9 +173,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19891 (D)", 
+         "num": "19891", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -338,9 +338,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "93851 (C)", 
+         "num": "93851", 
          "from": "", 
-         "comments": "", 
+         "comments": "(C)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -1186,9 +1186,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19803 (D)", 
+         "num": "19803", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -1531,9 +1531,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "10453 (D)", 
+         "num": "10453", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -3462,9 +3462,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19803 (C)", 
+         "num": "19803", 
          "from": "", 
-         "comments": "", 
+         "comments": "(C)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -4169,9 +4169,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19805 (C)", 
+         "num": "19805", 
          "from": "", 
-         "comments": "", 
+         "comments": "(C)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -6726,9 +6726,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19809 (D)", 
+         "num": "19809", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -7062,9 +7062,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "10461 (D)", 
+         "num": "10461", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -8086,9 +8086,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "11221 (D)", 
+         "num": "11221", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -8623,9 +8623,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "11223 (D)", 
+         "num": "11223", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -8984,9 +8984,9 @@
       }, 
       {
          "line": "RE2", 
-         "num": "19221 (D)", 
+         "num": "19221", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -9511,9 +9511,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19813 (D)", 
+         "num": "19813", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -11807,9 +11807,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "10467 (D)", 
+         "num": "10467", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -12704,9 +12704,9 @@
       }, 
       {
          "line": "RE2", 
-         "num": "19233 (B)", 
+         "num": "19233", 
          "from": "", 
-         "comments": "", 
+         "comments": "(B)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -13413,9 +13413,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19883 (B)", 
+         "num": "19883", 
          "from": "", 
-         "comments": "", 
+         "comments": "(B)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -13759,9 +13759,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "19815 (B)", 
+         "num": "19815", 
          "from": "", 
-         "comments": "", 
+         "comments": "(B)", 
          "stations": [
             {
                "name": "Warszawa Zachodnia", 
@@ -14990,9 +14990,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "91852 (C)", 
+         "num": "91852", 
          "from": "", 
-         "comments": "", 
+         "comments": "(C)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -15163,9 +15163,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "91890 (D)", 
+         "num": "91890", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -17101,9 +17101,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "91892 (C)", 
+         "num": "91892", 
          "from": "", 
-         "comments": "", 
+         "comments": "(C)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -18157,9 +18157,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "11850 (D)", 
+         "num": "11850", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -21170,9 +21170,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "11854 (D)", 
+         "num": "11854", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -27838,9 +27838,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "91826 (D)", 
+         "num": "91826", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -28014,9 +28014,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "11864 (D)", 
+         "num": "11864", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
@@ -29758,9 +29758,9 @@
       }, 
       {
          "line": "R2", 
-         "num": "11868 (D)", 
+         "num": "11868", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
             {
                "name": "\u0141uk\u00f3w", 
