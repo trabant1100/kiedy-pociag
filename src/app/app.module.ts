@@ -5,15 +5,21 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { TrainStationPipe } from './train-station.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TrainStationPipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    FormsModule,
+    NgbTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

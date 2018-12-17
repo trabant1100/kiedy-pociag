@@ -13,5 +13,5 @@ export class StationCoordService {
 
   getStationCoords() {
     return this.http.get<StationCoord>(this.stationUrl).toPromise();
-  }  
+  }
 }

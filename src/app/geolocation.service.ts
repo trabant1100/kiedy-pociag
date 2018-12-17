@@ -9,7 +9,7 @@ export class GeolocationService {
   constructor() { }
 
   startTracking(callback: (lat: number, long: number) => void) {
-    if(navigator.geolocation) {
+    if (navigator.geolocation) {
       this.tracking = true;
       navigator.geolocation.watchPosition((position: Position) => {
         callback(position.coords.latitude, position.coords.longitude);
@@ -20,7 +20,7 @@ export class GeolocationService {
   }
 
   getCurrentPosition(callback: (lat: number, long: number) => void) {
-    if(navigator.geolocation) {
+    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position: Position) => {
         callback(position.coords.latitude, position.coords.longitude);
       });

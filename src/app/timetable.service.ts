@@ -1,16 +1,176 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Timetable } from './timetable';
+import { Timetable, TrainEntity } from './timetable';
+import Holidays from 'date-holidays';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TimetableService {
-  timetableUrl = 'assets/out.json'
+  private timetableUrl = 'assets/out.json'
+  private MON = 1; private TUE = 2; private WED = 3; private THU = 4; private FRI = 5; private SAT = 6; private SUN = 0;
 
   constructor(private http: HttpClient) { }
 
   getTimetable() {
     return this.http.get<Timetable>(this.timetableUrl).toPromise();
+  }
+
+  getTimetableForDate(date: Date, timetable: Timetable): Timetable {
+    let hd = new Holidays('PL');
+    let holiday = hd.isHoliday(date);
+    let day = date.getDay();
+    let weekend = date.getDay() == 6 || date.getDay() == 0;
+    let working = !holiday && !weekend;
+
+    let trains = timetable.trains.filter((train: TrainEntity) => {
+      let comments = train.comments;
+      let num = train.num;
+      let result = false;
+      if (comments.trim() == '') {
+        result = true;
+      }
+      if (comments.includes('(C)') && (day in [this.SAT, this.SUN] || holiday)) { // only in weekend and holiday
+        result = true;
+      }
+      if (comments.includes('(D)') && working) { // only in working days
+        result = true;
+      }
+      if (comments.includes('(B)') && day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SUN]) { // MON-FRI and SAN
+        result = true;
+      }
+      if (comments.includes('(E)') && day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT] && !holiday) { // MON-SAT except holidays
+        result = true;
+      }
+      if (num == '19841') {
+        if (comments.includes('[1]') && this.isDayAndMonth(14, 1, date)) {
+          result = true;
+        }
+        if (comments.includes('[2]') && (!this.isDayAndMonth(14, 1, date) && working)) {
+          result = true;
+        }
+      } else if (num == 'BOLIMEK') {
+        if (comments.includes('[1]') && this.isDayAndMonthBetween(11, 12, 18, 12, date)) {
+          result = true;
+        }
+        if (comments.includes('[2]') && (!this.isDayAndMonthBetween(11, 12, 14, 12, date) && !this.isDayAndMonthBetween(17, 12, 18, 12, date) && working)) {
+          result = true;
+        }
+      } else if (num == '93862/3') {
+        if (comments.includes('[1]') && this.isDayAndMonthAfter(18, 12, date) && working) {
+          result = true;
+        }
+        if (comments.includes('[2]') && this.isDayAndMonthBefore(17, 12, date) && working) {
+          result = true;
+        }
+      } else if (num == '19877') {
+        if (comments.includes('[3]') && ((day in [this.FRI, this.SUN]) || this.isDayAndMonth(22, 12, date) || this.isDayAndMonth(26, 12, date))) {
+          result = true;
+        }
+        if (comments.includes('[4]') && (day in [this.MON, this.TUE, this.WED, this.THU, this.SAT]) && !this.isDayAndMonth(22, 12, date) && !this.isDayAndMonth(26, 12, date)) {
+          result = true;
+        }
+      } else if (num == '93450/1') {
+        if (comments.includes('[1]') && this.isDayAndMonthAfter(15, 1, date) && working) {
+          result = true;
+        }
+        if (comments.includes('[1]') && this.isDayAndMonthBefore(11, 1, date) && working) {
+          result = true;
+        }
+      } else if (num in ['93450/1', '91800/1', '91590/1']) {
+        if ((comments.includes('[3]') || comments.includes('[4]')) && day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT]) {
+          result = true;
+        }
+      } else if (num == '93400/1') {
+        if (comments.includes('[1]') && this.isDayAndMonth(14, 1, date) && working) {
+          result = true;
+        }
+        if (comments.includes('[2]') && this.isDayAndMonthBefore(11, 1, date) && working) {
+          result = true;
+        }
+      } else if (num == '12890/1') {
+        if (comments.includes('[3]') && (day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT])) {
+          result = true;
+        }
+      } else if (num == '93460/1') {
+        if (comments.includes('[4]') && this.isDayAndMonthBefore(14, 1, date) && working) {
+          result = true;
+        }
+      } else if (num in ['93460/1', '93942/3']) {
+        if (comments.includes('[1]') && this.isDayAndMonthAfter(15, 1, date)) {
+          result = true;
+        }
+      } else if (num == '11852') {
+        if (comments.includes('[2]') && day == this.SUN) {
+          result = true;
+        }
+      } else if (num == '93942/3') {
+        if (comments.includes('[3]') && this.isDayAndMonthBefore(14, 1, date) && working) {
+          result = true;
+        }
+      } else if (num == '91818/9') {
+        // TODO - error!!!
+        if (comments.includes('93312/3') && ((weekend || holiday) || this.isDayAndMonthBetween(10, 12, 14, 12, date) || this.isDayAndMonth(17, 12, date))) {
+          result = true;
+        }
+      } else if (num == '93312/3') {
+        if (comments.includes('[1]') && ((day in [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT] && !holiday)
+          || this.isDayAndMonth(23, 12, date) || this.isDayAndMonth(25, 12, date) || this.isDayAndMonth(30, 12, date))) {
+          result = true;
+        }
+      } else if (num == '91234') {
+        if (comments.includes('[2]') && ((day == this.SUN || this.isDayAndMonth(26, 12, date) || this.isDayAndMonth(1, 1, date))
+          && !this.isDayAndMonth(23, 12, date) && !this.isDayAndMonth(30, 12, date))) {
+          result = true;
+        }
+      } else if (num == '91824') {
+        if (comments.includes('[1]') && this.isDayAndMonthAfter(15, 1, date) && working) {
+          result = true;
+        }
+        if (comments.includes('[2]') && this.isDayAndMonthBefore(14, 1, date) && working) {
+          result = true;
+        }
+      } else if (num == '91848/9') {
+        if (comments.includes('[1]') && this.isDayAndMonthBefore(8, 3, date)) {
+          result = true;
+        }
+        if (comments.includes('[2]') && this.isDayAndMonth(9, 3, date)) {
+          result = true;
+        }
+      }
+
+      return result;
+    });
+
+    return { trains: trains };
+  }
+
+  private isDayAndMonth(day: number, month: number, date: Date): boolean {
+    return date.getDate() == day && date.getMonth() == month - 1;
+  }
+
+  private isDayAndMonthBetween(day1: number, month1: number, day2: number, month2: number, date: Date): boolean {
+    date = new Date(date);
+    date.setHours(0, 0, 0, 0);
+    let d1 = new Date(date); d1.setDate(day1); d1.setMonth(month1 - 1);
+    let d2 = new Date(date); d2.setDate(day2); d2.setMonth(month2 - 1);
+
+    return d1.getTime() <= date.getTime() && date.getTime() <= d2.getTime();
+  }
+
+  private isDayAndMonthAfter(day: number, month: number, date): boolean {
+    date = new Date(date);
+    date.setHours(0, 0, 0, 0);
+    let d = new Date(date); d.setDate(day); d.setMonth(month - 1);
+
+    return date.getTime() <= d.getTime();
+  }
+
+  private isDayAndMonthBefore(day: number, month: number, date): boolean {
+    date = new Date(date);
+    date.setHours(0, 0, 0, 0);
+    let d = new Date(date); d.setDate(day); d.setMonth(month - 1);
+
+    return date.getTime() >= d.getTime();
   }
 }
