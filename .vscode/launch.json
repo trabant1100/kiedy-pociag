@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/timetable/fix_csv.py",
             "console": "integratedTerminal",
-            "args": ["R2 Warszawa-Łuków 9 XII-9 III (5 XII).csv", "out.csv"],
+            "args": ["R2 Warszawa-Łuków 9 XII-9 III (5 XII) UTF8.csv", "out.csv"],
             "cwd": "${workspaceFolder}/timetable/"
         },
         {

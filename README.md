@@ -3,8 +3,8 @@
 1. Download PDF timetable
 2. Open in Word and copy all tables as they are into Excel
 3. Save this as csv file
-4. Run timetable/fix_csv.py to generate proper csv file
-5. Convert (manually for now) generated csv to utf-8 encoding
+4. Convert (manually for now) generated csv to utf-8 encoding
+5. Run timetable/fix_csv.py to generate proper csv file
 6. Run timetable/create_json.py to generate json file
 7. Run timetable/create_stations_json to generate stations json file
 

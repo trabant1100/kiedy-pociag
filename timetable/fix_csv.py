@@ -1,4 +1,4 @@
-# coding=cp1250
+# coding=utf8
 import argparse
 import csv
 import re
@@ -17,64 +17,70 @@ data = list(csv.reader(open(srcname), delimiter=';'))
 
 namesplit = {
     'Warszawa Zachodnia Warszawa Ochota': ['Warszawa Zachodnia', 'Warszawa Ochota'],
-    'Warszawa Powiœle Warszawa Stadion': ['Warszawa Powiœle', 'Warszawa Stadion'],
-    'Halinów Cisie': ['Halinów', 'Cisie'],
-    'Miñsk Maz. Anielina Barcz¹ca': ['Miñsk Maz. Anielina', 'Barcz¹ca'],
-    'Mienia Ceg³ów': ['Mienia', 'Ceg³ów'],
+    'Warszawa PowiÅ›le Warszawa Stadion': ['Warszawa PowiÅ›le', 'Warszawa Stadion'],
+    'HalinÃ³w Cisie': ['HalinÃ³w', 'Cisie'],
+    'MiÅ„sk Maz. Anielina BarczÄ…ca': ['MiÅ„sk Maz. Anielina', 'BarczÄ…ca'],
+    'Mienia CegÅ‚Ã³w': ['Mienia', 'CegÅ‚Ã³w'],
     'Sosnowe Koszewnica': ['Sosnowe', 'Koszewnica'],
-    'Kotuñ Sabinka': ['Kotuñ', 'Sabinka'],
-    'Dziewule Radomyœl': ['Dziewule', 'Radomyœl'],
-    'Radomyœl Dziewule': ['Radomyœl', 'Dziewule'],
+    'KotuÅ„ Sabinka': ['KotuÅ„', 'Sabinka'],
+    'Dziewule RadomyÅ›l': ['Dziewule', 'RadomyÅ›l'],
+    'RadomyÅ›l Dziewule': ['RadomyÅ›l', 'Dziewule'],
     'Borki Kosy Kosiorki': ['Borki Kosy', 'Kosiorki'],
     'Koszewnica Sosnowe': ['Koszewnica', 'Sosnowe'],
-    'Ceg³ów Mienia': ['Ceg³ów', 'Mienia'],
-    'Sabinka Kotuñ': ['Sabinka', 'Kotuñ'],
-    'Nowe Dêbe Wielkie Dêbe Wielkie': ['Nowe Dêbe Wielkie', 'Dêbe Wielkie'],
-    'Sulejówek Mi³osna Sulejówek': ['Sulejówek Mi³osna', 'Sulejówek'],
-    'W-wa Wola Grzybowska W-wa Weso³a': ['W-wa Wola Grzybowska', 'W-wa Weso³a'],
-    'Warszawa Stadion Warszawa Powiœle': ['Warszawa Stadion', 'Warszawa Powiœle'],
+    'CegÅ‚Ã³w Mienia': ['CegÅ‚Ã³w', 'Mienia'],
+    'Sabinka KotuÅ„': ['Sabinka', 'KotuÅ„'],
+    'Nowe DÄ™be Wielkie DÄ™be Wielkie': ['Nowe DÄ™be Wielkie', 'DÄ™be Wielkie'],
+    'SulejÃ³wek MiÅ‚osna SulejÃ³wek': ['SulejÃ³wek MiÅ‚osna', 'SulejÃ³wek'],
+    'W-wa Wola Grzybowska W-wa WesoÅ‚a': ['W-wa Wola Grzybowska', 'W-wa WesoÅ‚a'],
+    'Warszawa Stadion Warszawa PowiÅ›le': ['Warszawa Stadion', 'Warszawa PowiÅ›le'],
 }
 
 names = [
     'Warszawa Zachodnia',
 'Warszawa Ochota',
-'Warszawa Œródmieœcie',
+'Warszawa ÅšrÃ³dmieÅ›cie',
 'Warszawa Centralna',
-'Warszawa Powiœle',
+'Warszawa PowiÅ›le',
 'Warszawa Stadion',
 'Warszawa Wschodnia',
-'Warszawa Rembertów',
-'W-wa Weso³a',
+'Warszawa RembertÃ³w',
+'W-wa WesoÅ‚a',
 'W-wa Wola Grzybowska',
-'Sulejówek',
-'Sulejówek Mi³osna',
-'Halinów',
+'SulejÃ³wek',
+'SulejÃ³wek MiÅ‚osna',
+'HalinÃ³w',
 'Cisie',
-'Dêbe Wielkie',
-'Nowe Dêbe Wielkie',
-'Wrzosów',
-'Miñsk Maz.',
-'Miñsk Maz. Anielina',
-'Barcz¹ca',
+'DÄ™be Wielkie',
+'Nowe DÄ™be Wielkie',
+'WrzosÃ³w',
+'MiÅ„sk Maz.',
+'MiÅ„sk Maz. Anielina',
+'BarczÄ…ca',
 'Mienia',
-'Ceg³ów',
+'CegÅ‚Ã³w',
 'Mrozy',
 'Grodziszcze Maz.',
 'Sosnowe',
 'Koszewnica',
-'Kotuñ',
+'KotuÅ„',
 'Sabinka',
 'Siedlce Zach.',
 'Siedlce',
 'Siedlce Wschodnie',
-'Bia³ki Siedleckie',
+'BiaÅ‚ki Siedleckie',
 'Kosiorki',
 'Borki Kosy',
 'Dziewule',
-'Radomyœl',
-'Krynka £ukowska',
-'£uków',
+'RadomyÅ›l',
+'Krynka Åukowska',
+'ÅukÃ³w',
 ]
+
+def hasLineSectionInLine(line):
+    for x, value in enumerate(line):
+        if x >= 3 and re.match(r'R\d', value):
+            return True
+    return False
 
 # states
 BLANK, LINE, NUMBER, FREQ, HOUR = range(0, 5)
@@ -82,7 +88,7 @@ BLANK, LINE, NUMBER, FREQ, HOUR = range(0, 5)
 state = BLANK
 outdata = list()
 for y, line in enumerate(data):
-    if re.match(r'R\d', line[3]):
+    if hasLineSectionInLine(line):
         state = LINE
     elif state < HOUR and state != BLANK:
         state += 1
@@ -109,22 +115,10 @@ for y, line in enumerate(data):
         outdata.append(line[1:]) 
 
 for y, line in enumerate(outdata):
-    if re.match(r'R\d', line[2]):
-        outdata[y][0] = '__BEGIN__'
-
-'''partitioned = []
-lineslen = []
-for y, line in enumerate(outdata):
-    if line[0] == '__BEGIN__':
-       part = []
-       partitioned.append(part)
-    part.append(line)
-    lineslen.append(len(line))
-
-assert all(l == lineslen[0] for l in lineslen)
-#assert all(p == len(partitioned[0]) for p in map(lambda lst: len(lst), partitioned))
-for part in partitioned:
-    print len(part)'''
+    for x, value in enumerate(line):
+        if x >= 2 and re.match(r'R\d', line[x]):
+            outdata[y][0] = '__BEGIN__'
+            break
 
 wr = csv.writer(open(dstname, 'wb'), delimiter=';')
 wr.writerows(outdata)
