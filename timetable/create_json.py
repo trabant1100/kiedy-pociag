@@ -37,6 +37,14 @@ assert all(l == lineslen[0] for l in lineslen)
 jd = {}
 jd['trains'] = []
 
+def fixTrain(train):
+    comms = re.search(r'\([A-Z]\)', train['num'])
+    if(comms):
+        train['comments'] += comms.group(0)
+        train['num'] = re.sub(r'\([A-Z]\)', '', train['num'])
+        train['num'] = train['num'].strip()
+
+
 def parsepart(part):
     part = zip(*part)
     trains = []
@@ -50,6 +58,7 @@ def parsepart(part):
             'from': line[3],
             'stations': []
         }
+        fixTrain(train)
         for x, val in enumerate(line):
             if x < 4:
                 continue

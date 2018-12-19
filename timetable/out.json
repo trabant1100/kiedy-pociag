@@ -23199,7 +23199,1905 @@
             {
                "name": "Warszawa Zachodnia", 
                "time": "14:47"
+            }
+         ]
+      }, 
+      {
+         "line": "R8", 
+         "num": "12224/5", 
+         "from": "", 
+         "comments": "(D)", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
             }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "Cisie", 
+               "time": ""
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "14:36", 
+               "time": "14:35"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "14:39"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "14:41"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "14:45"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "14:48"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "14:51"
+            }
+         ]
+      }, 
+      {
+         "line": "R2", 
+         "num": "11858", 
+         "from": "", 
+         "comments": "", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": "12:58"
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": "13:04"
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": "13:07"
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": "13:10"
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": "13:14"
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": "13:17"
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": "13:20"
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": "13:22"
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": "13:25"
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "Cisie", 
+               "time": ""
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": ""
+            }
+         ]
+      }, 
+      {
+         "line": "R2", 
+         "num": "91872", 
+         "from": "", 
+         "comments": "", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time2": "13:42", 
+               "time": "13:39"
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": "13:45"
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": "13:50"
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": "13:54"
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": "13:57"
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": "14:01"
+            }, 
+            {
+               "name": "Mrozy", 
+               "time2": "14:12", 
+               "time": "14:05"
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": "14:17"
+            }, 
+            {
+               "name": "Mienia", 
+               "time": "14:20"
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": "14:23"
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": "14:26"
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": "14:28"
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time2": "14:34", 
+               "time": "14:29"
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": "14:37"
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": "14:39"
+            }, 
+            {
+               "name": "Cisie", 
+               "time": "14:41"
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": "14:44"
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": "14:47"
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time2": "14:50", 
+               "time": "14:48"
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": "14:52"
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": "14:55"
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time2": "14:59", 
+               "time": "14:58"
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "15:06", 
+               "time": "15:05"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "15:09"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "15:11"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "15:15"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "15:18"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "15:21"
+            }
+         ]
+      }, 
+      {
+         "line": "R1", 
+         "num": "93310/1", 
+         "from": "", 
+         "comments": "(D)", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time2": "15:07", 
+               "time": "15:02"
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": "15:10"
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": "15:12"
+            }, 
+            {
+               "name": "Cisie", 
+               "time": "15:15"
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": "15:18"
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": "15:21"
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time2": "15:24", 
+               "time": "15:21"
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": "15:26"
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": "15:29"
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time2": "15:33", 
+               "time": "15:32"
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "15:40", 
+               "time": "15:39"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "15:43"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "15:45"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "15:49"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "15:52"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "15:55"
+            }
+         ]
+      }, 
+      {
+         "line": "R3", 
+         "num": "93492/3", 
+         "from": "", 
+         "comments": "(D)", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "Cisie", 
+               "time": ""
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "15:51", 
+               "time": "15:50"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "15:54"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "15:56"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "16:00"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "16:03"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "16:06"
+            }
+         ]
+      }, 
+      {
+         "line": "R2", 
+         "num": "11860", 
+         "from": "", 
+         "comments": "", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": "14:13"
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": "14:19"
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": "14:22"
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": "14:25"
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": "14:29"
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": "14:32"
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": "14:35"
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": "14:37"
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": "14:40"
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "Cisie", 
+               "time": ""
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": ""
+            }
+         ]
+      }, 
+      {
+         "line": "R2", 
+         "num": "91874", 
+         "from": "", 
+         "comments": "", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time2": "14:48", 
+               "time": "14:45"
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": "14:51"
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": "14:57"
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": "15:01"
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": "15:04"
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": "15:08"
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": "15:12"
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": "15:12"
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": "15:17"
+            }, 
+            {
+               "name": "Mienia", 
+               "time": "15:20"
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": "15:23"
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": "15:26"
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": "15:28"
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time2": "15:34", 
+               "time": "15:29"
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": "15:37"
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": "15:39"
+            }, 
+            {
+               "name": "Cisie", 
+               "time": "15:41"
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": "15:44"
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": "15:47"
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time2": "15:50", 
+               "time": "15:48"
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": "15:52"
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": "15:55"
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time2": "15:59", 
+               "time": "15:58"
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "16:06", 
+               "time": "16:05"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "16:09"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "16:11"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "16:15"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "16:18"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "16:21"
+            }
+         ]
+      }, 
+      {
+         "line": "R8", 
+         "num": "12226/7", 
+         "from": "", 
+         "comments": "(D)", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "Cisie", 
+               "time": ""
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "16:25", 
+               "time": "16:24"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "16:28"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "16:30"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "16:34"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "16:37"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "16:40"
+            }
+         ]
+      }, 
+      {
+         "line": "R1", 
+         "num": "93312/3", 
+         "from": "", 
+         "comments": "(D) [1]", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time2": "16:06", 
+               "time": "16:02"
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": "16:09"
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": "16:11"
+            }, 
+            {
+               "name": "Cisie", 
+               "time": "16:14"
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": "16:17"
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": "16:20"
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time2": "16:23", 
+               "time": "16:21"
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": "16:26"
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": "16:28"
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time2": "16:33", 
+               "time": "16:32"
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "16:40", 
+               "time": "16:39"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "16:43"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "16:45"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "16:49"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "16:52"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "16:55"
+            }
+         ]
+      }, 
+      {
+         "line": "R2", 
+         "num": "91818/9", 
+         "from": "(C) [2]", 
+         "comments": "93312/3", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time2": "16:06", 
+               "time": "16:02"
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": "16:09"
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": "16:11"
+            }, 
+            {
+               "name": "Cisie", 
+               "time": "16:14"
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": "16:17"
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": "16:20"
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time2": "16:23", 
+               "time": "16:21"
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": "16:26"
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": "16:28"
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time2": "16:33", 
+               "time": "16:32"
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "16:40", 
+               "time": "16:39"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "16:43"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "16:45"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "16:49"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "16:52"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "16:55"
+            }
+         ]
+      }, 
+      {
+         "line": "11828", 
+         "num": "", 
+         "from": "", 
+         "comments": "(D)", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": "15:13"
+            }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": "15:19"
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": "15:22"
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": "15:25"
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": "15:29"
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": "15:32"
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": "15:35"
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": "15:37"
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": "15:40"
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": ""
+            }, 
+            {
+               "name": "Cisie", 
+               "time": ""
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": ""
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": ""
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": ""
+            }
+         ]
+      }, 
+      {
+         "line": "11828", 
+         "num": "", 
+         "from": "", 
+         "comments": "(C)", 
+         "stations": [
             {
                "name": "\u0141uk\u00f3w", 
                "time": "15:13"
@@ -23383,176 +25281,11 @@
          ]
       }, 
       {
-         "line": "R8", 
-         "num": "12224/5", 
+         "line": "R2", 
+         "num": "91876", 
          "from": "", 
-         "comments": "(D)", 
+         "comments": "", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "Cisie", 
-               "time": ""
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "14:36", 
-               "time": "14:35"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "14:39"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "14:41"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "14:45"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "14:48"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "14:51"
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
@@ -23721,686 +25454,8 @@
          ]
       }, 
       {
-         "line": "R2", 
-         "num": "11858", 
-         "from": "", 
-         "comments": "", 
-         "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": "12:58"
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": "13:04"
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": "13:07"
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": "13:10"
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": "13:14"
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": "13:17"
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": "13:20"
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": "13:22"
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": "13:25"
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "Cisie", 
-               "time": ""
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time2": "17:07", 
-               "time": "17:02"
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": "17:10"
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": "17:12"
-            }, 
-            {
-               "name": "Cisie", 
-               "time": "17:15"
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": "17:18"
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "17:21"
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time2": "17:24", 
-               "time": "17:21"
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": "17:26"
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": "17:29"
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time2": "17:33", 
-               "time": "17:32"
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "17:40", 
-               "time": "17:39"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "17:43"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "17:45"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "17:49"
-            }, 
-            {
-               "name": "Warszawa Centralna", 
-               "time": "|"
-            }, 
-            {
-               "name": "Warszawa Centralna", 
-               "time": "|"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "17:52"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "17:55"
-            }
-         ]
-      }, 
-      {
-         "line": "R2", 
-         "num": "91872", 
-         "from": "", 
-         "comments": "", 
-         "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time2": "13:42", 
-               "time": "13:39"
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": "13:45"
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": "13:50"
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": "13:54"
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": "13:57"
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": "14:01"
-            }, 
-            {
-               "name": "Mrozy", 
-               "time2": "14:12", 
-               "time": "14:05"
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": "14:17"
-            }, 
-            {
-               "name": "Mienia", 
-               "time": "14:20"
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": "14:23"
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": "14:26"
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": "14:28"
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time2": "14:34", 
-               "time": "14:29"
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": "14:37"
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": "14:39"
-            }, 
-            {
-               "name": "Cisie", 
-               "time": "14:41"
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": "14:44"
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "14:47"
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time2": "14:50", 
-               "time": "14:48"
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": "14:52"
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": "14:55"
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time2": "14:59", 
-               "time": "14:58"
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "15:06", 
-               "time": "15:05"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "15:09"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "15:11"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "15:15"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "15:18"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "15:21"
-            }, 
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time2": "17:07", 
-               "time": "17:02"
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": "17:10"
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": "17:12"
-            }, 
-            {
-               "name": "Cisie", 
-               "time": "17:15"
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": "17:18"
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "17:21"
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time2": "17:24", 
-               "time": "17:21"
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": "17:26"
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": "17:29"
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time2": "17:33", 
-               "time": "17:32"
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "17:40", 
-               "time": "17:39"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "17:43"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "17:45"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "17:49"
-            }, 
-            {
-               "name": "Warszawa Centralna", 
-               "time": "|"
-            }, 
-            {
-               "name": "Warszawa Centralna", 
-               "time": "|"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "17:52"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "17:55"
-            }
-         ]
-      }, 
-      {
          "line": "R1", 
-         "num": "93310/1", 
+         "num": "93314/5", 
          "from": "", 
          "comments": "(D)", 
          "stations": [
@@ -24498,72 +25553,264 @@
             }, 
             {
                "name": "Wrzos\u00f3w", 
-               "time2": "15:07", 
-               "time": "15:02"
+               "time2": "17:07", 
+               "time": "17:02"
             }, 
             {
                "name": "Nowe D\u0119be Wielkie", 
-               "time": "15:10"
+               "time": "17:10"
             }, 
             {
                "name": "D\u0119be Wielkie", 
-               "time": "15:12"
+               "time": "17:12"
             }, 
             {
                "name": "Cisie", 
-               "time": "15:15"
+               "time": "17:15"
             }, 
             {
                "name": "Halin\u00f3w", 
-               "time": "15:18"
+               "time": "17:18"
             }, 
             {
                "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "15:21"
+               "time": "17:21"
             }, 
             {
                "name": "Sulej\u00f3wek", 
-               "time2": "15:24", 
-               "time": "15:21"
+               "time2": "17:24", 
+               "time": "17:21"
             }, 
             {
                "name": "W-wa Wola Grzybowska", 
-               "time": "15:26"
+               "time": "17:26"
             }, 
             {
                "name": "W-wa Weso\u0142a", 
-               "time": "15:29"
+               "time": "17:29"
             }, 
             {
                "name": "Warszawa Rembert\u00f3w", 
-               "time2": "15:33", 
-               "time": "15:32"
+               "time2": "17:33", 
+               "time": "17:32"
             }, 
             {
                "name": "Warszawa Wschodnia", 
-               "time2": "15:40", 
-               "time": "15:39"
+               "time2": "17:40", 
+               "time": "17:39"
             }, 
             {
                "name": "Warszawa Stadion", 
-               "time": "15:43"
+               "time": "17:43"
             }, 
             {
                "name": "Warszawa Powi\u015ble", 
-               "time": "15:45"
+               "time": "17:45"
             }, 
             {
                "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "15:49"
+               "time": "17:49"
+            }, 
+            {
+               "name": "Warszawa Centralna", 
+               "time": "|"
+            }, 
+            {
+               "name": "Warszawa Centralna", 
+               "time": "|"
             }, 
             {
                "name": "Warszawa Ochota", 
-               "time": "15:52"
+               "time": "17:52"
             }, 
             {
                "name": "Warszawa Zachodnia", 
-               "time": "15:55"
+               "time": "17:55"
+            }
+         ]
+      }, 
+      {
+         "line": "R2", 
+         "num": "91820/1", 
+         "from": "", 
+         "comments": "(C)", 
+         "stations": [
+            {
+               "name": "\u0141uk\u00f3w", 
+               "time": ""
             }, 
+            {
+               "name": "Krynka \u0141ukowska", 
+               "time": ""
+            }, 
+            {
+               "name": "Radomy\u015bl", 
+               "time": ""
+            }, 
+            {
+               "name": "Dziewule", 
+               "time": ""
+            }, 
+            {
+               "name": "Borki Kosy", 
+               "time": ""
+            }, 
+            {
+               "name": "Kosiorki", 
+               "time": ""
+            }, 
+            {
+               "name": "Bia\u0142ki Siedleckie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Wschodnie", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Siedlce Zach.", 
+               "time": ""
+            }, 
+            {
+               "name": "Sabinka", 
+               "time": ""
+            }, 
+            {
+               "name": "Kotu\u0144", 
+               "time": ""
+            }, 
+            {
+               "name": "Koszewnica", 
+               "time": ""
+            }, 
+            {
+               "name": "Sosnowe", 
+               "time": ""
+            }, 
+            {
+               "name": "Grodziszcze Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Mrozy", 
+               "time": ""
+            }, 
+            {
+               "name": "Ceg\u0142\u00f3w", 
+               "time": ""
+            }, 
+            {
+               "name": "Mienia", 
+               "time": ""
+            }, 
+            {
+               "name": "Barcz\u0105ca", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz. Anielina", 
+               "time": ""
+            }, 
+            {
+               "name": "Mi\u0144sk Maz.", 
+               "time": ""
+            }, 
+            {
+               "name": "Wrzos\u00f3w", 
+               "time2": "17:07", 
+               "time": "17:02"
+            }, 
+            {
+               "name": "Nowe D\u0119be Wielkie", 
+               "time": "17:10"
+            }, 
+            {
+               "name": "D\u0119be Wielkie", 
+               "time": "17:12"
+            }, 
+            {
+               "name": "Cisie", 
+               "time": "17:15"
+            }, 
+            {
+               "name": "Halin\u00f3w", 
+               "time": "17:18"
+            }, 
+            {
+               "name": "Sulej\u00f3wek Mi\u0142osna", 
+               "time": "17:21"
+            }, 
+            {
+               "name": "Sulej\u00f3wek", 
+               "time2": "17:24", 
+               "time": "17:21"
+            }, 
+            {
+               "name": "W-wa Wola Grzybowska", 
+               "time": "17:26"
+            }, 
+            {
+               "name": "W-wa Weso\u0142a", 
+               "time": "17:29"
+            }, 
+            {
+               "name": "Warszawa Rembert\u00f3w", 
+               "time2": "17:33", 
+               "time": "17:32"
+            }, 
+            {
+               "name": "Warszawa Wschodnia", 
+               "time2": "17:40", 
+               "time": "17:39"
+            }, 
+            {
+               "name": "Warszawa Stadion", 
+               "time": "17:43"
+            }, 
+            {
+               "name": "Warszawa Powi\u015ble", 
+               "time": "17:45"
+            }, 
+            {
+               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
+               "time": "17:49"
+            }, 
+            {
+               "name": "Warszawa Centralna", 
+               "time": "|"
+            }, 
+            {
+               "name": "Warszawa Centralna", 
+               "time": "|"
+            }, 
+            {
+               "name": "Warszawa Ochota", 
+               "time": "17:52"
+            }, 
+            {
+               "name": "Warszawa Zachodnia", 
+               "time": "17:55"
+            }
+         ]
+      }, 
+      {
+         "line": "R8", 
+         "num": "93944/5", 
+         "from": "", 
+         "comments": "(D)", 
+         "stations": [
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
@@ -24740,176 +25987,11 @@
          ]
       }, 
       {
-         "line": "R3", 
-         "num": "93492/3", 
+         "line": "R2", 
+         "num": "91878", 
          "from": "", 
-         "comments": "(D)", 
+         "comments": "", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "Cisie", 
-               "time": ""
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "15:51", 
-               "time": "15:50"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "15:54"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "15:56"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "16:00"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "16:03"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "16:06"
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
@@ -25078,183 +26160,11 @@
          ]
       }, 
       {
-         "line": "R2", 
-         "num": "11860", 
+         "line": "R3", 
+         "num": "19420/1", 
          "from": "", 
-         "comments": "", 
+         "comments": "(D)", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": "14:13"
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": "14:19"
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": "14:22"
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": "14:25"
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": "14:29"
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": "14:32"
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": "14:35"
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": "14:37"
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": "14:40"
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "Cisie", 
-               "time": ""
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": ""
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
@@ -25432,167 +26342,10 @@
       }, 
       {
          "line": "R2", 
-         "num": "91874", 
+         "num": "11862", 
          "from": "", 
-         "comments": "", 
+         "comments": "(E) [1]", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time2": "14:48", 
-               "time": "14:45"
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": "14:51"
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": "14:57"
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": "15:01"
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": "15:04"
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": "15:08"
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": "15:12"
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": "15:12"
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": "15:17"
-            }, 
-            {
-               "name": "Mienia", 
-               "time": "15:20"
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": "15:23"
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": "15:26"
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": "15:28"
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time2": "15:34", 
-               "time": "15:29"
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": "15:37"
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": "15:39"
-            }, 
-            {
-               "name": "Cisie", 
-               "time": "15:41"
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": "15:44"
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "15:47"
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time2": "15:50", 
-               "time": "15:48"
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": "15:52"
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": "15:55"
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time2": "15:59", 
-               "time": "15:58"
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "16:06", 
-               "time": "16:05"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "16:09"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "16:11"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "16:15"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "16:18"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "16:21"
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": "16:48"
@@ -25776,176 +26529,11 @@
          ]
       }, 
       {
-         "line": "R8", 
-         "num": "12226/7", 
+         "line": "RE2", 
+         "num": "91234", 
          "from": "", 
-         "comments": "(D)", 
+         "comments": "[2]", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "Cisie", 
-               "time": ""
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "16:25", 
-               "time": "16:24"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "16:28"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "16:30"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "16:34"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "16:37"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "16:40"
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": "16:50"
@@ -26115,170 +26703,10 @@
       }, 
       {
          "line": "R1", 
-         "num": "93312/3", 
+         "num": "93316/7", 
          "from": "", 
-         "comments": "(D) [1]", 
+         "comments": "(D)", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time2": "16:06", 
-               "time": "16:02"
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": "16:09"
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": "16:11"
-            }, 
-            {
-               "name": "Cisie", 
-               "time": "16:14"
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": "16:17"
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "16:20"
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time2": "16:23", 
-               "time": "16:21"
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": "16:26"
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": "16:28"
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time2": "16:33", 
-               "time": "16:32"
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "16:40", 
-               "time": "16:39"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "16:43"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "16:45"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "16:49"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "16:52"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "16:55"
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
@@ -26450,171 +26878,11 @@
          ]
       }, 
       {
-         "line": "R2", 
-         "num": "91818/9", 
-         "from": "(C) [2]", 
-         "comments": "93312/3", 
+         "line": "RE2", 
+         "num": "91222", 
+         "from": "", 
+         "comments": "(D)", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": ""
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": ""
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": ""
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": ""
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": ""
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time2": "16:06", 
-               "time": "16:02"
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": "16:09"
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": "16:11"
-            }, 
-            {
-               "name": "Cisie", 
-               "time": "16:14"
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": "16:17"
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": "16:20"
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time2": "16:23", 
-               "time": "16:21"
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": "16:26"
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": "16:28"
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time2": "16:33", 
-               "time": "16:32"
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time2": "16:40", 
-               "time": "16:39"
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": "16:43"
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": "16:45"
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": "16:49"
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": "16:52"
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": "16:55"
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
@@ -26783,183 +27051,11 @@
          ]
       }, 
       {
-         "line": "11828", 
-         "num": "(D)", 
+         "line": "R2", 
+         "num": "91822/3", 
          "from": "", 
-         "comments": "", 
+         "comments": "(C)", 
          "stations": [
-            {
-               "name": "\u0141uk\u00f3w", 
-               "time": "15:13"
-            }, 
-            {
-               "name": "Krynka \u0141ukowska", 
-               "time": "15:19"
-            }, 
-            {
-               "name": "Radomy\u015bl", 
-               "time": "15:22"
-            }, 
-            {
-               "name": "Dziewule", 
-               "time": "15:25"
-            }, 
-            {
-               "name": "Borki Kosy", 
-               "time": "15:29"
-            }, 
-            {
-               "name": "Kosiorki", 
-               "time": "15:32"
-            }, 
-            {
-               "name": "Bia\u0142ki Siedleckie", 
-               "time": "15:35"
-            }, 
-            {
-               "name": "Siedlce Wschodnie", 
-               "time": "15:37"
-            }, 
-            {
-               "name": "Siedlce", 
-               "time": "15:40"
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Siedlce Zach.", 
-               "time": ""
-            }, 
-            {
-               "name": "Sabinka", 
-               "time": ""
-            }, 
-            {
-               "name": "Kotu\u0144", 
-               "time": ""
-            }, 
-            {
-               "name": "Koszewnica", 
-               "time": ""
-            }, 
-            {
-               "name": "Sosnowe", 
-               "time": ""
-            }, 
-            {
-               "name": "Grodziszcze Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Mrozy", 
-               "time": ""
-            }, 
-            {
-               "name": "Ceg\u0142\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Mienia", 
-               "time": ""
-            }, 
-            {
-               "name": "Barcz\u0105ca", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz. Anielina", 
-               "time": ""
-            }, 
-            {
-               "name": "Mi\u0144sk Maz.", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Wrzos\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Nowe D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "D\u0119be Wielkie", 
-               "time": ""
-            }, 
-            {
-               "name": "Cisie", 
-               "time": ""
-            }, 
-            {
-               "name": "Halin\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek Mi\u0142osna", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "Sulej\u00f3wek", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Wola Grzybowska", 
-               "time": ""
-            }, 
-            {
-               "name": "W-wa Weso\u0142a", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Rembert\u00f3w", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Wschodnia", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Stadion", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Powi\u015ble", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa \u015ar\u00f3dmie\u015bcie", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Ochota", 
-               "time": ""
-            }, 
-            {
-               "name": "Warszawa Zachodnia", 
-               "time": ""
-            }, 
             {
                "name": "\u0141uk\u00f3w", 
                "time": ""
