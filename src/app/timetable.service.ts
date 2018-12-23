@@ -53,7 +53,7 @@ export class TimetableService {
         if(comments.includes('[2]')) {
           result = !this.isDayAndMonth(14, 1, date);
         }
-      } else if (num == 'BOLIMEK') {
+      } else if (num == '93860/1 BOLIMEK') {
         if (comments.includes('[1]')) {
           result = result && this.isDayAndMonthBetween(11, 12, 18, 12, date);
         }
@@ -140,6 +140,10 @@ export class TimetableService {
         }
         if (comments.includes('[2]')) {
           result = this.isDayAndMonth(9, 3, date);
+        }
+      } else if (num == '91232/3 ŁUKOWIANKA') {
+        if (comments.includes('[3]')) {
+          result = [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT].includes(day);
         }
       }
 

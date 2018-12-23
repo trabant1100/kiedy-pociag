@@ -2582,8 +2582,8 @@
          ]
       }, 
       {
-         "line": "93860/1", 
-         "num": "BOLIMEK", 
+         "line": "", 
+         "num": "93860/1 BOLIMEK", 
          "from": "\u017byrard\u00f3w", 
          "comments": "(D) [1]", 
          "stations": [
@@ -2755,8 +2755,8 @@
          ]
       }, 
       {
-         "line": "93860/1", 
-         "num": "BOLIMEK", 
+         "line": "", 
+         "num": "93860/1 BOLIMEK", 
          "from": "\u017byrard\u00f3w", 
          "comments": "(D) [2]", 
          "stations": [
@@ -9865,8 +9865,8 @@
          ]
       }, 
       {
-         "line": "19230/1", 
-         "num": "\u0141UKOWIANKA", 
+         "line": "", 
+         "num": "19230/1 \u0141UKOWIANKA", 
          "from": "WARSZAWA S\u0141U\u017bEW.", 
          "comments": "(B)", 
          "stations": [
@@ -17447,8 +17447,8 @@
          ]
       }, 
       {
-         "line": "91232/3", 
-         "num": "\u0141UKOWIANKA", 
+         "line": "", 
+         "num": "91232/3 \u0141UKOWIANKA", 
          "from": "", 
          "comments": "[3]", 
          "stations": [

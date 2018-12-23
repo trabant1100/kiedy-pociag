@@ -65,13 +65,13 @@ describe('TimetableService', () => {
       // End station Łuków
       removed = _.remove(trains, (t: TrainEntity) => {
         return isTrainInNums(t, ['19891', '10451', '10453', '10455', '11801', '10457', '11803', '10459', '10461', '10463', '11805',
-          'ŁUKOWIANKA', '10465', '10467', '19233', '10469', '19893']);
+          '19230/1 ŁUKOWIANKA', '10465', '10467', '19233', '10469', '19893']);
       });
       checkEndStation('Łuków', removed);
 
       // End station Siedlce
       removed = _.remove(trains, (t: TrainEntity) => {
-        return isTrainInNums(t, ['93851', '19851', '19853', 'BOLIMEK', '19855', '19857', '19859', '19861', '19863', 'CZEREMSZAK',
+        return isTrainInNums(t, ['93851', '19851', '19853', '93860/1 BOLIMEK', '19855', '19857', '19859', '19861', '19863', 'CZEREMSZAK',
           '19865', '19867', '19869', '19871', '19221', '19873', '19875', '93862/3', '93862/3', '19877', '19877', '19879', '19881',
           '19883', '19885', '19887', '19889', '19251 CZEREMSZAK']);
       });
@@ -110,13 +110,19 @@ describe('TimetableService', () => {
 
     let noTrain = (num: string, day: number, month: number, year: number = 2018, finder: (t: TrainEntity) => boolean = (t) => true) => {
       let t = service.getTimetableForDate(createDate(day, month, year), timetable);
+      
+      since(`Train ${num} should not be present at ${day}.${month}.${year}`);
       expect(t.trains.find((t: TrainEntity) => t.num == num && finder(t))).not.toBeDefined();
     }
 
     let oneTrain = (num: string, day: number, month: number, year: number = 2018, finder: (t: TrainEntity) => boolean = (t) => true) => {
       let t = service.getTimetableForDate(createDate(day, month, year), timetable);
       let found = t.trains.filter((t: TrainEntity) => t.num == num && finder(t));
+      
+      since(`Train ${num} should be present only once at ${day}.${month}.${year}`);
       expect(found!.length).toEqual(1);
+
+      since(`Train ${num} should be present at ${day}.${month}.${year}`);
       expect(found[0]).toBeDefined();
     }
 
@@ -177,8 +183,8 @@ describe('TimetableService', () => {
       // 2. page
       testTrainsD(['21840/1', '93262/3', '91670/1', '93802/3', '93240/1', '91444/5']);
 
-      noTrain('BOLIMEK', 16, 12, 2018);
-      oneTrain('BOLIMEK', 18, 12, 2018);
+      noTrain('93860/1 BOLIMEK', 16, 12, 2018);
+      oneTrain('93860/1 BOLIMEK', 18, 12, 2018);
 
       noTrain('19803', 2, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:05'));
       oneTrain('19803', 1, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:05'));
@@ -197,8 +203,8 @@ describe('TimetableService', () => {
       noTrain('19591', 5, 1, 2019);
       oneTrain('19591', 6, 1, 2019);
 
-      noTrain('ŁUKOWIANKA', 5, 1, 2019);
-      oneTrain('ŁUKOWIANKA', 6, 1, 2019);
+      noTrain('19230/1 ŁUKOWIANKA', 5, 1, 2019);
+      oneTrain('19230/1 ŁUKOWIANKA', 6, 1, 2019);
 
       // 6. page
       testTrainsD(['93816/7', '21826/7', '93266/7', '10467', '93230/1', '93732/3', '21842/3']);
@@ -251,8 +257,8 @@ describe('TimetableService', () => {
       noTrain('93400/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:36'));
       oneTrain('93400/1', 10, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:36'));
 
-      // noTrain('ŁUKOWIANKA', 13, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
-      // oneTrain('ŁUKOWIANKA', 12, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
+      noTrain('91232/3 ŁUKOWIANKA', 13, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
+      oneTrain('91232/3 ŁUKOWIANKA', 12, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
     });
 
     const req = httpMock.expectOne(TimetableService.API_URL);

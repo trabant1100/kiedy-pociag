@@ -6,8 +6,10 @@ import io
 import json
 
 parser = argparse.ArgumentParser(description='Creates JSON from csv')
-parser.add_argument('srcname', metavar='srcname', type=str, help='CSV input file name')
-parser.add_argument('dstname', metavar='dstname', type=str, help='JSON output file name')
+parser.add_argument('srcname', metavar='srcname',
+                    type=str, help='CSV input file name')
+parser.add_argument('dstname', metavar='dstname',
+                    type=str, help='JSON output file name')
 
 args = parser.parse_args()
 srcname = args.srcname
@@ -15,8 +17,8 @@ dstname = args.dstname
 
 print 'From CSV file {} creating JSON file {}'.format(srcname, dstname)
 
-#with io.open(srcname, 'r', encoding='cp1250') as srcfile:
-    #data = list(csv.reader(srcfile, delimiter=';'))
+# with io.open(srcname, 'r', encoding='cp1250') as srcfile:
+#data = list(csv.reader(srcfile, delimiter=';'))
 
 data = list(csv.reader(open(srcname), delimiter=';'))
 
@@ -24,8 +26,8 @@ partitioned = []
 lineslen = []
 for y, line in enumerate(data):
     if line[0] == '__BEGIN__':
-       part = []
-       partitioned.append(part)
+        part = []
+        partitioned.append(part)
     part.append(line)
     '''for val in line:
         val = val.replace('\\xc2\\xa0', '')
@@ -37,6 +39,7 @@ assert all(l == lineslen[0] for l in lineslen)
 jd = {}
 jd['trains'] = []
 
+
 def fixTrain(train):
     comms = re.search(r'\([A-Z]\)', train['num'])
     if(comms):
@@ -46,7 +49,9 @@ def fixTrain(train):
     if(train['num'] == ''):
         train['num'] = train['line']
         train['line'] = ''
-
+    if(not train['line'].startswith('R')):
+        train['num'] = (train['line'] + ' ' + train['num']).strip()
+        train['line'] = ''
 
 def parsepart(part):
     part = zip(*part)
@@ -72,7 +77,8 @@ def parsepart(part):
             if val != '' and not re.match(r'\d\d:\d\d', val):
                 val = '|'
             name = part[0][x]
-            prevstation = train['stations'][-1] if len(train['stations']) > 0 else {'name': '', 'time': ''}
+            prevstation = train['stations'][-1] if len(train['stations']) > 0 else {
+                'name': '', 'time': ''}
             if prevstation['name'] == name and prevstation['time'] != val:
                 if re.match(r'\d\d:\d\d', prevstation['time']):
                     prevstation['time2'] = val
@@ -84,6 +90,7 @@ def parsepart(part):
                 train['stations'].append(station)
         trains.append(train)
     return trains
+
 
 for part in partitioned:
     trains = parsepart(part)
