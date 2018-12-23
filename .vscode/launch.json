@@ -10,7 +10,10 @@
             "request": "launch",
             "program": "${workspaceFolder}/timetable/fix_csv.py",
             "console": "integratedTerminal",
-            "args": ["R2 Warszawa-Łuków 9 XII-9 III (5 XII) UTF8.csv", "out.csv"],
+            "args": [
+                "R2 Warszawa-Łuków 9 XII-9 III (5 XII) UTF8.csv",
+                "out.csv"
+            ],
             "cwd": "${workspaceFolder}/timetable/"
         },
         {
@@ -19,8 +22,39 @@
             "request": "launch",
             "program": "${workspaceFolder}/timetable/create_json.py",
             "console": "integratedTerminal",
-            "args": ["out.csv", "out.json"],
+            "args": [
+                "out.csv",
+                "out.json"
+            ],
             "cwd": "${workspaceFolder}/timetable/"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jasmine Current File",
+            "program": "${workspaceFolder}/node_modules/jasmine-ts/lib/index",
+            "args": [
+                "${file}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Debug Tests",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/jasmine-ts/lib/index",
+            "stopOnEntry": false,
+            "args": [
+                "dist",
+                "--verbose",
+                "--require",
+                "ts-node/register"
+            ],
+            "cwd": "${workspaceRoot}",
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+            "outDir": "${workspaceRoot}/dist"
         },
         {
             "name": "Python: Current File (Integrated Terminal)",
