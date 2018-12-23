@@ -1,13 +1,13 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import * as _ from 'lodash';
-var since = require('jasmine2-custom-message');
 
 import { TimetableService } from './timetable.service';
 import { Timetable, TrainEntity, StationEntity, DIRECTION } from './timetable';
 
 import * as data from './../../timetable/out.json';
 import { TimetableDecorator } from './timetable-decorator';
+import { doesNotThrow } from 'assert';
 
 describe('TimetableService', () => {
   let injector: TestBed;
@@ -16,6 +16,16 @@ describe('TimetableService', () => {
 
   let createDate = (day: number, month: number, year: number): Date => {
     return new Date(year, month - 1, day, 12, 0, 0, 0);
+  }
+
+  let isTrainInNums = (t: TrainEntity, nums: string[]): boolean => {
+    return nums.includes(t.num);
+  }
+
+  let checkEndStation = (stationName: string, trains: TrainEntity[]) => {
+    for (let train of trains) {
+      expect(train.endStation.name == stationName).toBeTruthy(`End station of train ${train.num} should be ${stationName}`);
+    }
   }
 
   beforeEach(() => {
@@ -29,30 +39,12 @@ describe('TimetableService', () => {
     httpMock = injector.get(HttpTestingController);
   });
 
-
-
   afterEach(() => httpMock.verify());
 
-  // it('should be created', () => {
-
-  //   expect(service).toBeTruthy();
-  // });
-
-  it('veryfing end stations', () => {
+  it('veryfing end stations to LUK', () => {
     service.getTimetable().then((tt: Timetable) => {
       tt = new TimetableDecorator(tt).DecoratedTimetable;
       let trains = tt.trains.filter((t: TrainEntity) => t.direction == DIRECTION.LUK);
-
-      let isTrainInNums = (t: TrainEntity, nums: string[]): boolean => {
-        return nums.includes(t.num);
-      }
-
-      let checkEndStation = (stationName: string, trains: TrainEntity[]) => {
-        for (let train of trains) {
-          since(`End station of train ${train.num} should be ${stationName}`);
-          expect(train.endStation.name).toEqual(stationName);
-        }
-      }
 
       // End station Mińsk
       let removed = _.remove(trains, (t: TrainEntity) => {
@@ -82,13 +74,13 @@ describe('TimetableService', () => {
         return isTrainInNums(t, ['19841', '21840/1', '21844/5', '93732/3']);
       });
       checkEndStation('Mrozy', removed);
-      
+
       // End station Warszawa Rembertów
       removed = _.remove(trains, (t: TrainEntity) => {
         return isTrainInNums(t, ['93260/1', '93220/1', '91670/1', '93240/1', '93264/5', '91314/5', '11221', '11223', '93250/1', '93266/7', '93230/1']);
       });
       checkEndStation('Warszawa Rembertów', removed);
-      
+
       // End station Sulejówek Miłosna
       removed = _.remove(trains, (t: TrainEntity) => {
         return isTrainInNums(t, ['19591']);
@@ -98,7 +90,44 @@ describe('TimetableService', () => {
       for (let t of trains) {
         fail(`Train [${t.line}] [${t.num}] with end station ${t.endStation.name}`);
       }
+    });
 
+    const req = httpMock.expectOne(TimetableService.API_URL);
+    req.flush({ 'trains': data.trains });
+  });
+
+  it('veryfing end stations to WWA', () => {
+    service.getTimetable().then((tt: Timetable) => {
+      tt = new TimetableDecorator(tt).DecoratedTimetable;
+      let trains = tt.trains.filter((t: TrainEntity) => t.direction == DIRECTION.WWA);
+
+      // End station Warszawa Zachodnia
+      let removed = _.remove(trains, (t: TrainEntity) => {
+        return isTrainInNums(t, ['91850/1', '93330/1', '91852', '91890', '93450/1', '12800/1', '91230/1', '91800/1', '19442/3', '91854/5', '93940/1',
+          '91856/7', '91892', '93400/1', '93400/1', '91232/3 ŁUKOWIANKA', '91802/3', '93900/1', '91858', '93460/1', '12890/1', '93460/1', '91840/1',
+          '91804/5', '93942/3', '91860/1', '91220/1', '91806/7', '93490/1', '91862', '91808/9', '91864', '91810/1', '91866/7', '91812/3', '91868',
+          '91814/5', '91870/1', '91816/7', '12224/5', '91872', '93310/1', '93492/3', '91874', '12226/7', '93312/3', '91818/9', '91876', '93314/5',
+          '91820/1', '93944/5', '91878', '19420/1', '91234', '93316/7', '91222', '91822/3', '93946/7', '91880', '91824', '91826', '91882', '91224/5',
+          '91842/3', '91884', '91828/9', '91830/1', '91886', '91832/3', '91888', '91848/9'
+        ]);
+      });
+      checkEndStation('Warszawa Zachodnia', removed);
+
+      // End station Siedlce
+      removed = _.remove(trains, (t: TrainEntity) => {
+        return isTrainInNums(t, ['11852', '11822', '11854', '11826', '11856', '11858', '11860', '11828', '11862', '11864', '11866', '11868', '11870', '11850']);
+      });
+      checkEndStation('Siedlce', removed);
+
+      // End station Warszawa Wschodnia
+      removed = _.remove(trains, (t: TrainEntity) => {
+        return isTrainInNums(t, ['91590/1', '91250 CZEREMSZAK']);
+      });
+      checkEndStation('Warszawa Wschodnia', removed);
+
+      for (let t of trains) {
+        fail(`Train [${t.line}] [${t.num}] with end station ${t.endStation.name}`);
+      }
     });
 
     const req = httpMock.expectOne(TimetableService.API_URL);
@@ -110,19 +139,19 @@ describe('TimetableService', () => {
 
     let noTrain = (num: string, day: number, month: number, year: number = 2018, finder: (t: TrainEntity) => boolean = (t) => true) => {
       let t = service.getTimetableForDate(createDate(day, month, year), timetable);
-      
-      since(`Train ${num} should not be present at ${day}.${month}.${year}`);
+
+      //since(`Train ${num} should not be present at ${day}.${month}.${year}`);
       expect(t.trains.find((t: TrainEntity) => t.num == num && finder(t))).not.toBeDefined();
     }
 
     let oneTrain = (num: string, day: number, month: number, year: number = 2018, finder: (t: TrainEntity) => boolean = (t) => true) => {
       let t = service.getTimetableForDate(createDate(day, month, year), timetable);
       let found = t.trains.filter((t: TrainEntity) => t.num == num && finder(t));
-      
-      since(`Train ${num} should be present only once at ${day}.${month}.${year}`);
+
+      //since(`Train ${num} should be present only once at ${day}.${month}.${year}`);
       expect(found!.length).toEqual(1);
 
-      since(`Train ${num} should be present at ${day}.${month}.${year}`);
+      //since(`Train ${num} should be present at ${day}.${month}.${year}`);
       expect(found[0]).toBeDefined();
     }
 

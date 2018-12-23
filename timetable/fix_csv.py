@@ -107,6 +107,10 @@ for y, line in enumerate(data):
             print 'FIX #2 row {}\tcolumn\t{}\t{}'.format(y, x, val)
             line[x] = val[:5]
             data[y+1][x] = val[5:]
+        elif re.match(r'< \d', val):
+            print 'FIX #3 row {}\tcolumn\t{}\t{}'.format(y, x, val)
+            line[x] = '<'
+            data[y+1][x] = val[2:]
         elif x == 1 and val not in names and val != '' and state == HOUR:
             raise ValueError('Unknown station {}\tcolumn\t{}\t{}\tstate\t{}'.format(y, x, val, state))
     if line[1] in names and (y+1) < len(data) and data[y+1][1] == '' and not re.match(r'R\d', data[y+1][3]):
