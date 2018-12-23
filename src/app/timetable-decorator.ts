@@ -22,7 +22,7 @@ export class TimetableDecorator {
         let station = stations[stations.length - 1];
         for (let i = stations.length - 1; i >= 0; i--) {
             station = stations[i];
-            if (station.time != "" || station.time2 != "") {
+            if ((station.time != "" && station.time != '|') || (station.time2 != null && station.time2 != "" && station.time2 != '|')) {
                 return station;
             }
         }
@@ -31,15 +31,15 @@ export class TimetableDecorator {
     }
 
     private getDirection(train: TrainEntity): DIRECTION {
-        let endStation = train.endStation;
-        console.assert(endStation != null);
-        switch(endStation.name) {
+        let lastStation = train.stations[train.stations.length - 1];
+        console.assert(lastStation != null);
+        switch(lastStation.name) {
             case DIRECTION.WWA:
                 return DIRECTION.WWA;
             case 'Łuków':
                 return DIRECTION.LUK;
             default:
-                throw `Unknown direction ${endStation.name} ${train.num}`;
+                throw `Unknown direction ${lastStation.name} ${train.num}`;
         }
     }
 

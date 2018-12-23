@@ -76,12 +76,12 @@ export class TimetableService {
         }
       } else if (num == '93450/1') {
         if (comments.includes('[1]')) {
-          result = this.isDayAndMonthAfter(15, 1, date) && working;
+          result = this.isDayAndMonthBefore(15, 1, date) && working;
         }
-        if (comments.includes('[1]')) {
-          result = this.isDayAndMonthBefore(11, 1, date) && working;
+        if (comments.includes('[2]')) {
+          result = this.isDayAndMonthAfter(11, 1, date) && working;
         }
-      } else if (num in ['93450/1', '91800/1', '91590/1']) {
+      } else if (['91230/1', '91800/1', '91590/1'].includes(num)) {
         if ((comments.includes('[3]') || comments.includes('[4]'))) {
           result = [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT].includes(day);
         }
@@ -90,7 +90,7 @@ export class TimetableService {
           result = this.isDayAndMonth(14, 1, date) && working;
         }
         if (comments.includes('[2]')) {
-          result = this.isDayAndMonthBefore(11, 1, date) && working;
+          result = this.isDayAndMonthAfter(11, 1, date) && working;
         }
       } else if (num == '12890/1') {
         if (comments.includes('[3]')) {

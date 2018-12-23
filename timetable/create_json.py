@@ -43,12 +43,18 @@ def fixTrain(train):
         train['comments'] += comms.group(0)
         train['num'] = re.sub(r'\([A-Z]\)', '', train['num'])
         train['num'] = train['num'].strip()
+    if(train['num'] == ''):
+        train['num'] = train['line']
+        train['line'] = ''
 
 
 def parsepart(part):
     part = zip(*part)
     trains = []
     for y, line in enumerate(part):
+        if ''.join(line) == '':
+            print 'Skipping line #{}'.format(y)
+            continue
         if y < 2:
             continue
         train = {
