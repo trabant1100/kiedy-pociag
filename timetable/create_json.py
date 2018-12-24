@@ -40,7 +40,7 @@ jd = {}
 jd['trains'] = []
 
 
-def fixTrain(train):
+def fixTrain(train, line):
     comms = re.search(r'\([A-Z]\)', train['num'])
     if(comms):
         train['comments'] += comms.group(0)
@@ -52,6 +52,9 @@ def fixTrain(train):
     if(not train['line'].startswith('R')):
         train['num'] = (train['line'] + ' ' + train['num']).strip()
         train['line'] = ''
+    if(train['from'] == '' and not re.match(r'\d\d:\d\d', line[4])):
+        train['from'] = line[4]
+
 
 def parsepart(part):
     part = zip(*part)
@@ -69,7 +72,7 @@ def parsepart(part):
             'from': line[3],
             'stations': []
         }
-        fixTrain(train)
+        fixTrain(train, line)
         for x, val in enumerate(line):
             if x < 4:
                 continue
@@ -87,7 +90,8 @@ def parsepart(part):
                     'name': part[0][x],
                     'time': val
                 }
-                train['stations'].append(station)
+                if station['name'] != '' or station['time'] != '':
+                    train['stations'].append(station)
         trains.append(train)
     return trains
 

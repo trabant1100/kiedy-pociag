@@ -140,8 +140,7 @@ describe('TimetableService', () => {
     let noTrain = (num: string, day: number, month: number, year: number = 2018, finder: (t: TrainEntity) => boolean = (t) => true) => {
       let t = service.getTimetableForDate(createDate(day, month, year), timetable);
 
-      //since(`Train ${num} should not be present at ${day}.${month}.${year}`);
-      expect(t.trains.find((t: TrainEntity) => t.num == num && finder(t))).not.toBeDefined();
+      expect(t.trains.find((t: TrainEntity) => t.num == num && finder(t)) == null).toBeTruthy(`Train ${num} should not be present at ${day}.${month}.${year}`);
     }
 
     let oneTrain = (num: string, day: number, month: number, year: number = 2018, finder: (t: TrainEntity) => boolean = (t) => true) => {
@@ -159,10 +158,19 @@ describe('TimetableService', () => {
       return t.stations.find((station: StationEntity) => station.name == stationName && station.time == stationTime) != null;
     }
 
-    let testTrainsD = (nums: string[]) => {
-      for (let num of nums) {
-        noTrain(num, 5, 1, 2019);
-        oneTrain(num, 4, 1, 2019);
+    let testTrainsD = (trains: Array<string | [string, (t: TrainEntity) => boolean]>) => {
+      for (let train of trains) {
+        let num: string;
+        let filter: (t: TrainEntity) => boolean;
+        if (typeof train == 'string') {
+          num = train;
+          filter = () => true;
+        } else {
+          num = train[0];
+          filter = train[1];
+        }
+        noTrain(num, 5, 1, 2019, filter);
+        oneTrain(num, 4, 1, 2019, filter);
       }
     }
 
@@ -177,6 +185,22 @@ describe('TimetableService', () => {
       for (let num of nums) {
         noTrain(num, 5, 1, 2019);
         oneTrain(num, 6, 1, 2019);
+      }
+    }
+
+    let testTrainsSince = (day: number, month: number, year: number, trains: [string, (t: TrainEntity) => boolean][]) => {
+      let emptyFinder = (t: TrainEntity) => true
+      for (let train of trains) {
+        noTrain(train[0], day - 1, month, year, train[1] || emptyFinder);
+        oneTrain(train[0], day, month, year, train[1] || emptyFinder);
+      }
+    }
+
+    let testTrainsUntil = (day: number, month: number, year: number, trains: [string, (t: TrainEntity) => boolean][]) => {
+      let emptyFinder = (t: TrainEntity) => true
+      for (let train of trains) {
+        noTrain(train[0], day + 1, month, year, train[1] || emptyFinder);
+        oneTrain(train[0], day, month, year, train[1] || emptyFinder);
       }
     }
 
@@ -288,6 +312,28 @@ describe('TimetableService', () => {
 
       noTrain('91232/3 ŁUKOWIANKA', 13, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
       oneTrain('91232/3 ŁUKOWIANKA', 12, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
+
+      noTrain('93460/1', 15, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '08:39'));
+      oneTrain('93460/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '08:39'));
+
+      noTrain('12890/1', 13, 1, 2019);
+      oneTrain('12890/1', 12, 1, 2019);
+
+      // 10. page
+      testTrainsD(['91840/1', '91220/1', '93490/1']);
+
+      testTrainsSince(15, 1, 2019, [['93942/3', (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '08:59')]]);
+
+      noTrain('11852', 12, 1, 2019);
+      oneTrain('11852', 13, 1, 2019);
+
+      testTrainsSince(14, 1, 2019, [['93942/3', (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '09:06')]]);
+
+      // 11. page
+      testTrainsD(['11854', '91810/1', '91812/3', '91814/5']);
+
+      // 12. page
+      testTrainsD(['91816/7', '12224/5', '93310/1', '93492/3', '12226/7', ['11828', (t: TrainEntity) => t.from == 'Terespol']]);
     });
 
     const req = httpMock.expectOne(TimetableService.API_URL);

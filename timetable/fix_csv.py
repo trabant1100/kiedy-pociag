@@ -83,7 +83,7 @@ def hasLineSectionInLine(line):
     return False
 
 # states
-BLANK, LINE, NUMBER, FREQ, HOUR = range(0, 5)
+BLANK, LINE, NUMBER, FREQ, FROM, HOUR = range(0, 6)
 
 state = BLANK
 outdata = list()

@@ -98,11 +98,11 @@ export class TimetableService {
         }
       } else if (num == '93460/1') {
         if (comments.includes('[4]')) {
-          result = this.isDayAndMonthBefore(14, 1, date) && working;
+          result = this.isDayAndMonthAfter(14, 1, date) && working;
         }
-      } else if (num in ['93460/1', '93942/3']) {
+      } else if (['93460/1', '93942/3'].includes(num)) {
         if (comments.includes('[1]')) {
-          result = this.isDayAndMonthAfter(15, 1, date);
+          result = this.isDayAndMonthBefore(15, 1, date);
         }
       } else if (num == '11852') {
         if (comments.includes('[2]')) {
@@ -174,7 +174,7 @@ export class TimetableService {
     return date.getTime() <= d.getTime();
   }
 
-  private isDayAndMonthBefore(day: number, month: number, date): boolean {
+  private isDayAndMonthBefore(day: number, month: number, date: Date): boolean {
     date = new Date(date);
     date.setHours(0, 0, 0, 0);
     let d = new Date(date); d.setDate(day); d.setMonth(month - 1);
