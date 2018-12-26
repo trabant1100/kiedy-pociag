@@ -50,7 +50,7 @@ export class TimetableService {
           result = !this.isDayAndMonth(14, 1, date) && working;
         }
       } else if (num == '93220/1') {
-        if(comments.includes('[2]')) {
+        if (comments.includes('[2]')) {
           result = !this.isDayAndMonth(14, 1, date);
         }
       } else if (num == '93860/1 BOLIMEK') {
@@ -113,14 +113,12 @@ export class TimetableService {
           result = this.isDayAndMonthBefore(14, 1, date) && working;
         }
       } else if (num == '91818/9') {
-        // TODO - error!!!
-        if (comments.includes('93312/3') && ((weekend || holiday) || this.isDayAndMonthBetween(10, 12, 14, 12, date) || this.isDayAndMonth(17, 12, date))) {
-          result = true;
+        if (comments.includes('[2]')) {
+          result = weekend || !!holiday || this.isDayAndMonthBetween(10, 12, 14, 12, date) || this.isDayAndMonth(17, 12, date);
         }
       } else if (num == '93312/3') {
         if (comments.includes('[1]')) {
-          result = (([this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT].includes(day) && !holiday)
-            || this.isDayAndMonth(23, 12, date) || this.isDayAndMonth(25, 12, date) || this.isDayAndMonth(30, 12, date));
+          result = this.isDayAndMonthBefore(18, 12, date) && working;
         }
       } else if (num == '91234') {
         if (comments.includes('[2]')) {
@@ -129,10 +127,10 @@ export class TimetableService {
         }
       } else if (num == '91824') {
         if (comments.includes('[1]')) {
-          result = this.isDayAndMonthAfter(15, 1, date) && working;
+          result = this.isAfter(date, 15, 1, 2019) && working;
         }
         if (comments.includes('[2]')) {
-          result = this.isDayAndMonthBefore(14, 1, date) && working;
+          result = this.isBefore(date, 14, 1, 2019) && working;
         }
       } else if (num == '91848/9') {
         if (comments.includes('[1]')) {
@@ -144,6 +142,10 @@ export class TimetableService {
       } else if (num == '91232/3 ŁUKOWIANKA') {
         if (comments.includes('[3]')) {
           result = [this.MON, this.TUE, this.WED, this.THU, this.FRI, this.SAT].includes(day);
+        }
+      } else if (num == '11862') {
+        if (comments.includes('[1]')) {
+          result = result || this.isDayAndMonth(23, 12, date) || this.isDayAndMonth(25, 12, date) || this.isDayAndMonth(30, 12, date);
         }
       }
 
@@ -166,7 +168,23 @@ export class TimetableService {
     return d1.getTime() <= date.getTime() && date.getTime() <= d2.getTime();
   }
 
-  private isDayAndMonthAfter(day: number, month: number, date): boolean {
+  private isAfter(dateToCheck: Date, day: number, month: number, year: number): boolean {
+    dateToCheck = new Date(dateToCheck);
+    dateToCheck.setHours(0, 0, 0, 0);
+    let d = new Date(); d.setFullYear(year, month - 1, day);
+
+    return dateToCheck.getTime() >= d.getTime();
+  }
+
+  private isBefore(dateToCheck: Date, day: number, month: number, year: number): boolean {
+    dateToCheck = new Date(dateToCheck);
+    dateToCheck.setHours(0, 0, 0, 0);
+    let d = new Date(); d.setFullYear(year, month - 1, day);
+
+    return dateToCheck.getTime() <= d.getTime();
+  }
+
+  private isDayAndMonthAfter(day: number, month: number, date: Date): boolean {
     date = new Date(date);
     date.setHours(0, 0, 0, 0);
     let d = new Date(date); d.setDate(day); d.setMonth(month - 1);

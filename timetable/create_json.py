@@ -54,6 +54,11 @@ def fixTrain(train, line):
         train['line'] = ''
     if(train['from'] == '' and not re.match(r'\d\d:\d\d', line[4])):
         train['from'] = line[4]
+    
+    commsInFromSection = re.findall(r'(\([A-Z]\)|\[\d\])', train['from'])
+    if(len(commsInFromSection) > 0):
+        train['comments'] = ' '.join(commsInFromSection)
+        train['from'] = re.sub(r'(\([A-Z]\)|\[\d\])', '', train['from']).strip()
 
 
 def parsepart(part):
