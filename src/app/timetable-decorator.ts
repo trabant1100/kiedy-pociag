@@ -10,10 +10,12 @@ export class TimetableDecorator {
     }
 
     private decorate() {
+        let id = 1;
         for (const train of this.timetable.trains) {
             train.endStation = this.getEndStation(train);
             train.direction = this.getDirection(train);
             train.isCisie = this.isCisie(train);
+            train.id = id++;
         }
     }
 
@@ -33,7 +35,7 @@ export class TimetableDecorator {
     private getDirection(train: TrainEntity): DIRECTION {
         let lastStation = train.stations[train.stations.length - 1];
         console.assert(lastStation != null);
-        switch(lastStation.name) {
+        switch (lastStation.name) {
             case DIRECTION.WWA:
                 return DIRECTION.WWA;
             case 'Łuków':

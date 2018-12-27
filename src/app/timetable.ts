@@ -3,6 +3,7 @@ export interface Timetable {
 }
 
 export interface TrainEntity {
+    id: number,
     line: string;
     num: string;
     from: string;
