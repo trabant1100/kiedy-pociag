@@ -152,8 +152,12 @@ describe('TimetableService', () => {
       expect(found[0] != null).toBeTruthy(`Train ${num} should be present at ${day}.${month}.${year}`)
     }
 
-    let checkStationAtHour = (t: TrainEntity, stationName: string, stationTime: string): boolean => {
+    let checkStationAtTime = (t: TrainEntity, stationName: string, stationTime: string): boolean => {
       return t.stations.find((station: StationEntity) => station.name == stationName && station.time == stationTime) != null;
+    }
+
+    let checkStationAtTime2 = (t: TrainEntity, stationName: string, stationTime2: string): boolean => {
+      return t.stations.find((station: StationEntity) => station.name == stationName && station.time2 == stationTime2) != null;
     }
 
     let getTrainNumAndFilter = (train: string | [string, (t: TrainEntity) => boolean]): [string, (t: TrainEntity) => boolean]  => {
@@ -225,14 +229,14 @@ describe('TimetableService', () => {
       noTrain('93851', 19, 12);
       oneTrain('93851', 29, 12);
 
-      noTrain('19841', 15, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '04:50'));
-      oneTrain('19841', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '04:50'));
+      noTrain('19841', 15, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '04:50'));
+      oneTrain('19841', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '04:50'));
 
-      noTrain('19841', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '05:05'));
-      oneTrain('19841', 15, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '05:05'));
+      noTrain('19841', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '05:05'));
+      oneTrain('19841', 15, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '05:05'));
 
-      noTrain('19803', 6, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '05:20'));
-      oneTrain('19803', 15, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '05:20'));
+      noTrain('19803', 6, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '05:20'));
+      oneTrain('19803', 15, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '05:20'));
 
       noTrain('93220/1', 14, 1, 2019);
       oneTrain('93220/1', 15, 1, 2019);
@@ -249,8 +253,8 @@ describe('TimetableService', () => {
       noTrain('93860/1 BOLIMEK', 16, 12, 2018);
       oneTrain('93860/1 BOLIMEK', 18, 12, 2018);
 
-      noTrain('19803', 2, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:05'));
-      oneTrain('19803', 1, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:05'));
+      noTrain('19803', 2, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '07:05'));
+      oneTrain('19803', 1, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '07:05'));
 
       // 3. page
       testTrainsC(['19805']);
@@ -272,17 +276,17 @@ describe('TimetableService', () => {
       // 6. page
       testTrainsD(['93816/7', '21826/7', '93266/7', '10467', '93230/1', '93732/3', '21842/3']);
 
-      noTrain('93862/3', 17, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '17:21'));
-      oneTrain('93862/3', 18, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '17:21'));
+      noTrain('93862/3', 17, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '17:21'));
+      oneTrain('93862/3', 18, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '17:21'));
 
-      noTrain('93862/3', 18, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '17:29'));
-      oneTrain('93862/3', 17, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '17:29'));
+      noTrain('93862/3', 18, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '17:29'));
+      oneTrain('93862/3', 17, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '17:29'));
 
-      noTrain('19877', 20, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Sosnowe', '19:03'));
-      oneTrain('19877', 22, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Sosnowe', '19:03'));
+      noTrain('19877', 20, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Sosnowe', '19:03'));
+      oneTrain('19877', 22, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Sosnowe', '19:03'));
 
-      noTrain('19877', 22, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Sosnowe', '18:55'));
-      oneTrain('19877', 17, 12, 2018, (t: TrainEntity) => checkStationAtHour(t, 'Sosnowe', '18:55'));
+      noTrain('19877', 22, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Sosnowe', '18:55'));
+      oneTrain('19877', 17, 12, 2018, (t: TrainEntity) => checkStationAtTime(t, 'Sosnowe', '18:55'));
 
       // 7. page
       testTrainsB(['19233', '19883', '19815']);
@@ -294,11 +298,11 @@ describe('TimetableService', () => {
 
       testTrainsC(['91852', '91854/5']);
 
-      noTrain('93450/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '06:25'));
-      oneTrain('93450/1', 16, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '06:25'));
+      noTrain('93450/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '06:25'));
+      oneTrain('93450/1', 16, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '06:25'));
 
-      noTrain('93450/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '06:28'));
-      oneTrain('93450/1', 9, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '06:28'));
+      noTrain('93450/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '06:28'));
+      oneTrain('93450/1', 9, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '06:28'));
 
       noTrain('91230/1', 6, 1, 2019);
       oneTrain('91230/1', 5, 1, 2019);
@@ -314,17 +318,17 @@ describe('TimetableService', () => {
 
       testTrainsC(['91892']);
 
-      noTrain('93400/1', 16, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:32'));
-      oneTrain('93400/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:32'));
+      noTrain('93400/1', 16, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '07:32'));
+      oneTrain('93400/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '07:32'));
 
-      noTrain('93400/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:36'));
-      oneTrain('93400/1', 10, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '07:36'));
+      noTrain('93400/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '07:36'));
+      oneTrain('93400/1', 10, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '07:36'));
 
-      noTrain('91232/3 ŁUKOWIANKA', 13, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
-      oneTrain('91232/3 ŁUKOWIANKA', 12, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Halinów', '06:51'));
+      noTrain('91232/3 ŁUKOWIANKA', 13, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Halinów', '06:51'));
+      oneTrain('91232/3 ŁUKOWIANKA', 12, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Halinów', '06:51'));
 
-      noTrain('93460/1', 15, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '08:39'));
-      oneTrain('93460/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '08:39'));
+      noTrain('93460/1', 15, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '08:39'));
+      oneTrain('93460/1', 14, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '08:39'));
 
       noTrain('12890/1', 13, 1, 2019);
       oneTrain('12890/1', 12, 1, 2019);
@@ -332,12 +336,12 @@ describe('TimetableService', () => {
       // 10. page
       testTrainsD(['91840/1', '91220/1', '93490/1']);
 
-      testTrainsSince(15, 1, 2019, [['93942/3', (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '08:59')]]);
+      testTrainsSince(15, 1, 2019, [['93942/3', (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '08:59')]]);
 
       noTrain('11852', 12, 1, 2019);
       oneTrain('11852', 13, 1, 2019);
 
-      testTrainsSince(14, 1, 2019, [['93942/3', (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '09:06')]]);
+      testTrainsSince(14, 1, 2019, [['93942/3', (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '09:06')]]);
 
       // 11. page
       testTrainsD(['11854', '91810/1', '91812/3', '91814/5']);
@@ -372,14 +376,21 @@ describe('TimetableService', () => {
       // 14. page
       testTrainsD(['93946/7', '91826', '11864', '91224/5', '91842/3', '91828/9', '91830/1']);
 
-      testTrainsSince(15, 1, 2019, [['91824', (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '19:33')]]);
-      noTrain('91824', 26, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '19:33'));
-      oneTrain('91824', 25, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '19:33'));
+      testTrainsSince(15, 1, 2019, [['91824', (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '19:33')]]);
+      noTrain('91824', 26, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '19:33'));
+      oneTrain('91824', 25, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '19:33'));
       
-      testTrainsUntil(14, 1, 2019, [['91824', (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '19:36')]]);
-      //noTrain('91824', 1, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '19:36'));
-      //oneTrain('91824', 4, 1, 2019, (t: TrainEntity) => checkStationAtHour(t, 'Warszawa Zachodnia', '19:36'));
+      testTrainsUntil(14, 1, 2019, [['91824', (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '19:36')]]);
+      noTrain('91824', 1, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '19:36'));
+      oneTrain('91824', 4, 1, 2019, (t: TrainEntity) => checkStationAtTime(t, 'Warszawa Zachodnia', '19:36'));
 
+      // 15. page
+      testTrainsD(['91832/3', '11868']);
+
+      testTrainsUntil(8, 3, 2019, [['91848/9', (t: TrainEntity) => checkStationAtTime2(t, 'Warszawa Wschodnia', '00:11')]]);
+      
+      noTrain('91848/9', 8, 3, 2019, (t: TrainEntity) => checkStationAtTime2(t, 'Warszawa Wschodnia', '00:10'));
+      oneTrain('91848/9', 9, 3, 2019, (t: TrainEntity) => checkStationAtTime2(t, 'Warszawa Wschodnia', '00:10'));
     });
 
     const req = httpMock.expectOne(TimetableService.API_URL);

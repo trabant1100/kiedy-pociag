@@ -62,10 +62,10 @@ export class TimetableService {
         }
       } else if (num == '93862/3') {
         if (comments.includes('[1]')) {
-          result = this.isAfter(date, 18, 12, 2018) && working;
+          result = this.isAfterOrEqual(date, 18, 12, 2018) && working;
         }
         if (comments.includes('[2]')) {
-          result = this.isBefore(date, 17, 12, 2018) && working;
+          result = this.isBeforeOrEqual(date, 17, 12, 2018) && working;
         }
       } else if (num == '19877') {
         if (comments.includes('[3]')) {
@@ -76,10 +76,10 @@ export class TimetableService {
         }
       } else if (num == '93450/1') {
         if (comments.includes('[1]')) {
-          result = this.isAfter(date, 15, 1, 2019) && working;
+          result = this.isAfterOrEqual(date, 15, 1, 2019) && working;
         }
         if (comments.includes('[2]')) {
-          result = this.isBefore(date, 11, 1, 2019) && working;
+          result = this.isBeforeOrEqual(date, 11, 1, 2019) && working;
         }
       } else if (['91230/1', '91800/1', '91590/1'].includes(num)) {
         if ((comments.includes('[3]') || comments.includes('[4]'))) {
@@ -90,7 +90,7 @@ export class TimetableService {
           result = this.isEqual(date, 14, 1, 2019) && working;
         }
         if (comments.includes('[2]')) {
-          result = this.isBefore(date, 11, 1, 2019) && working;
+          result = this.isBeforeOrEqual(date, 11, 1, 2019) && working;
         }
       } else if (num == '12890/1') {
         if (comments.includes('[3]')) {
@@ -98,11 +98,11 @@ export class TimetableService {
         }
       } else if (num == '93460/1') {
         if (comments.includes('[4]')) {
-          result = this.isBefore(date, 14, 1, 2019) && working;
+          result = this.isBeforeOrEqual(date, 14, 1, 2019) && working;
         }
       } else if (['93460/1', '93942/3'].includes(num)) {
         if (comments.includes('[1]')) {
-          result = this.isAfter(date, 15, 1, 2019);
+          result = this.isAfterOrEqual(date, 15, 1, 2019);
         }
       } else if (num == '11852') {
         if (comments.includes('[2]')) {
@@ -110,7 +110,7 @@ export class TimetableService {
         }
       } else if (num == '93942/3') {
         if (comments.includes('[3]')) {
-          result = this.isBefore(date, 14, 1, 2019) && working;
+          result = this.isBeforeOrEqual(date, 14, 1, 2019) && working;
         }
       } else if (num == '91818/9') {
         if (comments.includes('[2]')) {
@@ -118,7 +118,7 @@ export class TimetableService {
         }
       } else if (num == '93312/3') {
         if (comments.includes('[1]')) {
-          result = this.isAfter(date, 18, 12, 2018) && working;
+          result = this.isAfterOrEqual(date, 18, 12, 2018) && working;
         }
       } else if (num == '91234') {
         if (comments.includes('[2]')) {
@@ -127,14 +127,14 @@ export class TimetableService {
         }
       } else if (num == '91824') {
         if (comments.includes('[1]')) {
-          result = this.isAfter(date, 15, 1, 2019) && working;
+          result = this.isAfterOrEqual(date, 15, 1, 2019) && working;
         }
         if (comments.includes('[2]')) {
-          result = this.isBefore(date, 14, 1, 2019) && working;
+          result = this.isBeforeOrEqual(date, 14, 1, 2019) && working;
         }
       } else if (num == '91848/9') {
         if (comments.includes('[1]')) {
-          result = this.isBefore(date, 8, 3, 2019);
+          result = this.isBeforeOrEqual(date, 8, 3, 2019);
         }
         if (comments.includes('[2]')) {
           result = this.isEqual(date, 9, 3, 2019);
@@ -169,7 +169,7 @@ export class TimetableService {
     return d1.getTime() <= dateToCheck.getTime() && dateToCheck.getTime() <= d2.getTime();
   }  
 
-  private isAfter(dateToCheck: Date, day: number, month: number, year: number): boolean {
+  private isAfterOrEqual(dateToCheck: Date, day: number, month: number, year: number): boolean {
     dateToCheck = new Date(dateToCheck);
     dateToCheck.setHours(0, 0, 0, 0);
     let d = new Date(); d.setFullYear(year, month - 1, day); d.setHours(0, 0, 0, 0);
@@ -177,7 +177,7 @@ export class TimetableService {
     return dateToCheck.getTime() >= d.getTime();
   }
 
-  private isBefore(dateToCheck: Date, day: number, month: number, year: number): boolean {
+  private isBeforeOrEqual(dateToCheck: Date, day: number, month: number, year: number): boolean {
     dateToCheck = new Date(dateToCheck);
     dateToCheck.setHours(0, 0, 0, 0);
     let d = new Date(); d.setFullYear(year, month - 1, day); d.setHours(0, 0, 0, 0)
