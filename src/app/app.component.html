@@ -1,37 +1,41 @@
 <div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col col-md-auto">
+  <div class="row justify-content-center">
+    <div class="col col-auto">
       <h1 class="">{{ nearest.name }} {{ nearest.dist }}m</h1>
     </div>
   </div>
-  <div class="row justify-content-md-center">
-    <div class="col col-md-auto">
+  <div class="row justify-content-center">
+    <div class="col col-auto">
       <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
     </div>
   </div>
-  <div class="row justify-content-md-center">
-    <div class="col col-md-auto">
+  <div class="row justify-content-center">
+    <div class="col col-auto">
       <button type="button" class="btn btn-primary btn-lg" (click)="whenTrainOnClick()">Kiedy pociąg</button>
     </div>
   </div>
-  <div class="row justify-content-md-center">
-    <div class="col col-md-auto">
-        <!-- {{ lat }}&nbsp;{{ long }}<br />
-        {{ nearest.name }} {{ nearest.dist }} -->
-      <h2>Warszawa</h2>
-      <ul class="list-group" *ngFor="let train of availableTrainsWwa">
-        <li class="list-group-item">{{getStationFromTrain(train, nearest.name) | trainStation}}</li>
+  <div class="row justify-content-center">
+    <div class="col col-auto">
+      <h3>Warszawa</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let train of availableTrainsWwa" [routerLink]="['/train-detail', train.id]"
+          routerLinkActive="active">
+          {{getStationFromTrain(train, nearest.name) | trainStation}}
+        </li>
       </ul>
-      <!--
-      {{getStationFromTrain(train, nearest.name) | json}} {{getEndStation(train) | json}} {{getDirection(train)}} {{isCisie(train)}} {{train.num}}
-      //-->
     </div>
-    <div class="col col-md-auto">
-        <h2>Łuków</h2>
-        <ul class="list-group" *ngFor="let train of availableTrainsLuk">
-          <li class="list-group-item">{{getStationFromTrain(train, nearest.name) | trainStation}}</li>
-        </ul>
-      </div>
+    <div class="col col-auto">
+      <h3>Łuków</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let train of availableTrainsLuk" [routerLink]="['/train-detail', train.id]"
+          routerLinkActive="active">
+          {{getStationFromTrain(train, nearest.name) | trainStation}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-footer">
+    <router-outlet></router-outlet>
   </div>
 </div>
 <!--<hr>

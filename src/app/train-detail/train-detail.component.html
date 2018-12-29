@@ -1,0 +1,6 @@
+<a [routerLink]="['/']">back</a>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let station of train.stations">
+    {{station.name}} {{station.time}}
+  </li>
+</ul>

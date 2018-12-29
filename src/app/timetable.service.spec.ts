@@ -42,7 +42,7 @@ describe('TimetableService', () => {
   afterEach(() => httpMock.verify());
 
   it('veryfing end stations to LUK', () => {
-    service.getTimetable().then((tt: Timetable) => {
+    service.getTimetable().toPromise().then((tt: Timetable) => {
       tt = new TimetableDecorator(tt).DecoratedTimetable;
       let trains = tt.trains.filter((t: TrainEntity) => t.direction == DIRECTION.LUK);
 
@@ -97,7 +97,7 @@ describe('TimetableService', () => {
   });
 
   it('veryfing end stations to WWA', () => {
-    service.getTimetable().then((tt: Timetable) => {
+    service.getTimetable().toPromise().then((tt: Timetable) => {
       tt = new TimetableDecorator(tt).DecoratedTimetable;
       let trains = tt.trains.filter((t: TrainEntity) => t.direction == DIRECTION.WWA);
 
@@ -218,7 +218,7 @@ describe('TimetableService', () => {
       }
     }
 
-    service.getTimetable().then((tt: Timetable) => {
+    service.getTimetable().toPromise().then((tt: Timetable) => {
       timetable = tt;
       expect(tt.trains.length).toBeGreaterThan(0);
 

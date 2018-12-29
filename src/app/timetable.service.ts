@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Timetable, TrainEntity } from './timetable';
 import Holidays from 'date-holidays';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class TimetableService {
 
   constructor(private http: HttpClient) { }
 
-  getTimetable() {
-    return this.http.get<Timetable>(TimetableService.API_URL).toPromise();
+  getTimetable(): Observable<Timetable> {
+    return this.http.get<Timetable>(TimetableService.API_URL);
   }
 
   getTimetableForDate(date: Date, timetable: Timetable): Timetable {

@@ -35,7 +35,7 @@ export class AppComponent {
     this.time.hour = this.date.getHours();
     this.time.minute = this.date.getMinutes();
     this.date.setMilliseconds(0);
-    this.timetableService.getTimetable().then((data: Timetable) => {
+    this.timetableService.getTimetable().toPromise().then((data: Timetable) => {
       this.timetable = new TimetableDecorator(data).DecoratedTimetable;
       this.stationService.getStationCoords().then((data: StationCoord) => {
         this.stationCoord = data;
