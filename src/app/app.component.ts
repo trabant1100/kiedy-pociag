@@ -7,6 +7,7 @@ import { StationCoordService } from './stationcoord.service';
 import { GeolocationService } from './geolocation.service';
 import * as geolib from 'geolib'
 import { TimetableDecorator } from './timetable-decorator';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent {
   long: number;
   time = { hour: 0, minute: 0 };
   nearest: StationDistance = { name: '', dist: -1 };
+  appTimestamp = environment.timestamp;
 
   constructor(private http: HttpClient, private timetableService: TimetableService, private stationService: StationCoordService,
     private geolocationService: GeolocationService) {
