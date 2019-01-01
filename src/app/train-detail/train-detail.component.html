@@ -1,6 +1,9 @@
-<a [routerLink]="['/']">back</a>
+<div class="close-container">
+  <a [routerLink]="['/']" class="close-link">Zamknij</a>
+</div>
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let station of train.stations">
-    {{station.name}} {{station.time}}
+  <li #stations class="list-group-item" *ngFor="let station of train.stations">
+    <div class="float-left">{{station.name}}</div>
+    <div class="float-right">{{station.time}}</div>
   </li>
 </ul>

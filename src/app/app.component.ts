@@ -8,6 +8,7 @@ import { GeolocationService } from './geolocation.service';
 import * as geolib from 'geolib'
 import { TimetableDecorator } from './timetable-decorator';
 import { environment } from '../environments/environment';
+import { StationCoordDecorator } from './station-coord-decorator';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,7 @@ export class AppComponent {
   lat: number;
   long: number;
   time = { hour: 0, minute: 0 };
-  nearest: StationDistance = { name: '', dist: -1 };
+  nearest: StationDistance = { station: {name: '', code: '', lat: '-1', long: '-1'}, dist: -1 };
   appTimestamp = environment.timestamp;
 
   constructor(private http: HttpClient, private timetableService: TimetableService, private stationService: StationCoordService,
@@ -40,7 +41,7 @@ export class AppComponent {
     this.timetableService.getTimetable().toPromise().then((data: Timetable) => {
       this.timetable = new TimetableDecorator(data).DecoratedTimetable;
       this.stationService.getStationCoords().then((data: StationCoord) => {
-        this.stationCoord = data;
+        this.stationCoord = new StationCoordDecorator(data).DecoratedStationCoord;
         this.updatePositionAndGetTrains();
       });
     });
@@ -84,7 +85,7 @@ export class AppComponent {
     this.nearest = this.findNearest(this.lat, this.long);
 
     let filterStation = (station: StationEntity, date: Date): boolean => {
-      return station.name == this.nearest.name && station.time != '' && this.isTimeAfter(station.time, date);
+      return station.name == this.nearest.station.name && station.time != '' && this.isTimeAfter(station.time, date);
     }
 
     let wwaCount = 0, lukCount = 0;
@@ -124,10 +125,10 @@ export class AppComponent {
   private findNearest(lat: number, long: number): StationDistance {
     let distances = this.stationCoord.stations
       .map((s: Station) => {
-        return { name: s.name, dist: geolib.getDistance({ latitude: s.lat, longitude: s.long }, { latitude: this.lat, longitude: this.long }) }
+        return { station: s, dist: geolib.getDistance({ latitude: s.lat, longitude: s.long }, { latitude: this.lat, longitude: this.long }) }
       });
 
-    return distances.sort((a: { name, dist }, b: { name, dist }) => a.dist - b.dist)[0]
+    return distances.sort((a: { station, dist }, b: { station, dist }) => a.dist - b.dist)[0]
   }
 
   private isTimeAfter(time: string, date: Date): boolean {
@@ -140,6 +141,6 @@ export class AppComponent {
 }
 
 interface StationDistance {
-  name: string,
+  station: Station,
   dist: number
 }

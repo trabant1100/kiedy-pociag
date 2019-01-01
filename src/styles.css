@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("/assets/back.jpg");
+    background-position: center top;
+    background-size: 250%;
+}
+
+.row {
+    /* margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-color: rgba(255,255,255,0.5); */
+}
+
+/* .row::before{
+    content: '';
+    background: url("/assets/back.jpg") 0 0 / cover fixed no-repeat;
+    filter: blur(6px);
+    position: absolute;
+    left:15px; top:34px; right:15px; bottom:35px;
+    z-index: -1;
+    pointer-events: none;
+} */

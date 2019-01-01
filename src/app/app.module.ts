@@ -12,7 +12,7 @@ import { TrainStationPipe } from './train-station.pipe';
 import { TrainDetailComponent } from './train-detail/train-detail.component';
 
 const appRoutes: Routes = [
-  { path: 'train-detail/:id', component: TrainDetailComponent}
+  { path: 'train-detail/:id/:stationCode', component: TrainDetailComponent}
 ];
 
 @NgModule({

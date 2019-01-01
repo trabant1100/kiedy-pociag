@@ -1,4 +1,5 @@
 import { TrainEntity, StationEntity, Timetable, DIRECTION } from './timetable';
+import { StationCoordDecorator } from './station-coord-decorator';
 
 export class TimetableDecorator {
     constructor(private timetable: Timetable) {
@@ -16,6 +17,9 @@ export class TimetableDecorator {
             train.direction = this.getDirection(train);
             train.isCisie = this.isCisie(train);
             train.id = id++;
+            for (const station of train.stations) {
+                station.code = StationCoordDecorator.getCodeFromName(station.name);
+            }
         }
     }
 
