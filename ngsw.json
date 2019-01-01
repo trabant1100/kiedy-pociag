@@ -1,18 +1,18 @@
 {
   "configVersion": 1,
-  "index": "https://trabant1100.github.io/kiedy-pociag/index.html",
+  "index": "https://trabant1100.github.io/kiedy-pociag/\r/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "https://trabant1100.github.io/kiedy-pociag/favicon.ico",
-        "https://trabant1100.github.io/kiedy-pociag/index.html",
-        "https://trabant1100.github.io/kiedy-pociag/main.440afea45e88cdfe8db4.js",
-        "https://trabant1100.github.io/kiedy-pociag/polyfills.20ab2d163684112c2aba.js",
-        "https://trabant1100.github.io/kiedy-pociag/runtime.ec2944dd8b20ec099bf3.js",
-        "https://trabant1100.github.io/kiedy-pociag/styles.6cacee6fe6a47f872a4d.css"
+        "https://trabant1100.github.io/kiedy-pociag/\r/favicon.ico",
+        "https://trabant1100.github.io/kiedy-pociag/\r/index.html",
+        "https://trabant1100.github.io/kiedy-pociag/\r/main.84612b1502f465faad07.js",
+        "https://trabant1100.github.io/kiedy-pociag/\r/polyfills.20ab2d163684112c2aba.js",
+        "https://trabant1100.github.io/kiedy-pociag/\r/runtime.ec2944dd8b20ec099bf3.js",
+        "https://trabant1100.github.io/kiedy-pociag/\r/styles.fc1b74ece46e3400ed26.css"
       ],
       "patterns": []
     },
@@ -21,38 +21,40 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-128x128.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-144x144.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-152x152.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-192x192.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-384x384.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-512x512.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-72x72.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-96x96.png",
-        "https://trabant1100.github.io/kiedy-pociag/assets/out.json",
-        "https://trabant1100.github.io/kiedy-pociag/assets/stations.json"
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/back.jpg",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-128x128.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-144x144.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-152x152.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-192x192.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-384x384.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-512x512.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-72x72.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-96x96.png",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/out.json",
+        "https://trabant1100.github.io/kiedy-pociag/\r/assets/stations.json"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "https://trabant1100.github.io/kiedy-pociag/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "https://trabant1100.github.io/kiedy-pociag/assets/out.json": "f0de544258153801a48b7fdf71b17ebe616593c3",
-    "https://trabant1100.github.io/kiedy-pociag/assets/stations.json": "372641b1e89751433c2441f236d718c531229027",
-    "https://trabant1100.github.io/kiedy-pociag/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://trabant1100.github.io/kiedy-pociag/index.html": "671848a20ec41b38da522500e6a0dda996c5666c",
-    "https://trabant1100.github.io/kiedy-pociag/main.440afea45e88cdfe8db4.js": "1aa73eb2527bde106bacd4bf8e4486b49cbd5aeb",
-    "https://trabant1100.github.io/kiedy-pociag/polyfills.20ab2d163684112c2aba.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
-    "https://trabant1100.github.io/kiedy-pociag/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "https://trabant1100.github.io/kiedy-pociag/styles.6cacee6fe6a47f872a4d.css": "da6c39415e1b25a93b95a14fc8a1cac72196c09d"
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/back.jpg": "ed0e5b6027dd7bd71a030f8705d95beb7d12419a",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/out.json": "f0de544258153801a48b7fdf71b17ebe616593c3",
+    "https://trabant1100.github.io/kiedy-pociag/\r/assets/stations.json": "372641b1e89751433c2441f236d718c531229027",
+    "https://trabant1100.github.io/kiedy-pociag/\r/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://trabant1100.github.io/kiedy-pociag/\r/index.html": "f5227be7cf9d55768c8f115266fce6cd9a9ff3ae",
+    "https://trabant1100.github.io/kiedy-pociag/\r/main.84612b1502f465faad07.js": "7b7272785bb2f6dd47eaa393eaf600cef7c48c3e",
+    "https://trabant1100.github.io/kiedy-pociag/\r/polyfills.20ab2d163684112c2aba.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "https://trabant1100.github.io/kiedy-pociag/\r/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://trabant1100.github.io/kiedy-pociag/\r/styles.fc1b74ece46e3400ed26.css": "55e3cd7e3679692a445e93dc70dc3aa6314479b8"
   },
   "navigationUrls": [
     {
