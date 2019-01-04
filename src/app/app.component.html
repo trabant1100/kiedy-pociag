@@ -1,8 +1,10 @@
 {{appTimestamp}}
+<div class="text-center">{{ nearest.dist | humanDistance }}</div>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col col-auto">
-      <h1 class="">{{ nearest.station.name }} {{ nearest.dist }}m</h1>
+    <div class="col">
+      
+      <h2 class="text-center">{{ nearest.station.shortName }}</h2>
     </div>
   </div>
   <div class="row justify-content-center">
@@ -16,8 +18,8 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col col-auto">
-      <h3>Warszawa</h3>
+    <div class="col ml-2 text-center">
+      <h4>Warszawa</h4>
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let train of availableTrainsWwa" [routerLink]="['/train-detail', train.id, nearest.station.code]"
           routerLinkActive="active">
@@ -25,8 +27,8 @@
         </li>
       </ul>
     </div>
-    <div class="col col-auto">
-      <h3>Łuków</h3>
+    <div class="col mr-2 text-center">
+      <h4>Łuków</h4>
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let train of availableTrainsLuk" [routerLink]="['/train-detail', train.id, nearest.station.code]"
           routerLinkActive="active">

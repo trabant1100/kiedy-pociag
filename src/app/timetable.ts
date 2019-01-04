@@ -16,6 +16,7 @@ export interface TrainEntity {
 
 export interface StationEntity {
     code: string;
+    shortName: string;
     name: string;
     time: string;
     time2?: string | null;

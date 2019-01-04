@@ -19,6 +19,7 @@ export class TimetableDecorator {
             train.id = id++;
             for (const station of train.stations) {
                 station.code = StationCoordDecorator.getCodeFromName(station.name);
+                station.shortName = StationCoordDecorator.generateShortName(station.name);
             }
         }
     }

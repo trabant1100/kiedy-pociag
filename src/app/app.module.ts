@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrainStationPipe } from './train-station.pipe';
 import { TrainDetailComponent } from './train-detail/train-detail.component';
+import { HumanDistancePipe } from './human-distance.pipe';
 
 const appRoutes: Routes = [
   { path: 'train-detail/:id/:stationCode', component: TrainDetailComponent}
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TrainStationPipe,
+    HumanDistancePipe,
     TrainDetailComponent,
   ],
   imports: [

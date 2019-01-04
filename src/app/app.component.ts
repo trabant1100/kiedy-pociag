@@ -9,6 +9,7 @@ import * as geolib from 'geolib'
 import { TimetableDecorator } from './timetable-decorator';
 import { environment } from '../environments/environment';
 import { StationCoordDecorator } from './station-coord-decorator';
+import { StationDistance } from './station-distance';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,7 @@ export class AppComponent {
   lat: number;
   long: number;
   time = { hour: 0, minute: 0 };
-  nearest: StationDistance = { station: {name: '', code: '', lat: '-1', long: '-1'}, dist: -1 };
+  nearest: StationDistance = { station: {shortName: '', name: '', code: '', lat: '-1', long: '-1'}, dist: -1 };
   appTimestamp = environment.timestamp;
 
   constructor(private http: HttpClient, private timetableService: TimetableService, private stationService: StationCoordService,
@@ -140,7 +141,3 @@ export class AppComponent {
   }
 }
 
-interface StationDistance {
-  station: Station,
-  dist: number
-}

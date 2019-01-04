@@ -7,7 +7,7 @@ import { StationEntity } from './timetable';
 export class TrainStationPipe implements PipeTransform {
 
   transform(station: StationEntity, args?: any): string {
-    return `${station.name} ${station.time}`;
+    return `${station.time || station.time2}`;
   }
 
 }
