@@ -51,6 +51,6 @@ export class TimetableDecorator {
     }
 
     private isCisie(train: TrainEntity): boolean {
-        return train.stations.find((station: StationEntity) => station.name == 'Cisie') != null;
+        return train.stations.find((station: StationEntity) => station.name == 'Cisie' && station.time != '' && station.time != '|') != null;
     }
 }

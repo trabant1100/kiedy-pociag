@@ -2,10 +2,6 @@
     padding: 0;
 }
 
-.col {
-    
-}
-
 .container {
     background: rgba(255,255,255,0.5);
     width: 90%;
@@ -24,10 +20,6 @@
     left:15px; top:34px; right:15px; bottom:35px;
     z-index: -1;
     pointer-events: none;
-}
-
-.list-group-item {
-    /* padding: .5rem 0.5rem; */
 }
 
 #train-detail {
