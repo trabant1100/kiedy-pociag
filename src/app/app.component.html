@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col">
-      
+
       <h2 class="text-center">{{ nearest.station.shortName }}</h2>
     </div>
   </div>
@@ -37,11 +37,14 @@
       </ul>
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col col-train-detail">
-      <router-outlet></router-outlet>
+      
     </div>
-  </div>
+  </div> -->
+</div>
+<div id="train-detail">
+  <router-outlet></router-outlet>
 </div>
 <!--<hr>
 <pre>Selected time: {{time | json}}</pre>

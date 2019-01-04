@@ -30,3 +30,10 @@
     /* padding: .5rem 0.5rem; */
 }
 
+#train-detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
