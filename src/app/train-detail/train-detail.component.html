@@ -1,4 +1,7 @@
 <div class="close-container">
+  <div class="route">
+    {{train.startStation?.name}} ⟶ {{train.endStation?.name}}
+  </div>
   <a [routerLink]="['/']" class="close-link">&times;</a>
 </div>
 <ul class="list-group">

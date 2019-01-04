@@ -9,6 +9,7 @@ export interface TrainEntity {
     from: string;
     comments: string;
     stations: (StationEntity)[];
+    startStation: StationEntity;
     endStation: StationEntity;
     isCisie: boolean;
     direction: DIRECTION;

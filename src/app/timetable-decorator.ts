@@ -13,6 +13,7 @@ export class TimetableDecorator {
     private decorate() {
         let id = 1;
         for (const train of this.timetable.trains) {
+            train.startStation = this.getStartStation(train);
             train.endStation = this.getEndStation(train);
             train.direction = this.getDirection(train);
             train.isCisie = this.isCisie(train);
@@ -22,6 +23,13 @@ export class TimetableDecorator {
                 station.shortName = StationCoordDecorator.generateShortName(station.name);
             }
         }
+    }
+
+    private getStartStation(train: TrainEntity): StationEntity {
+        let stations = train.stations;
+        let station = stations.find((s: StationEntity) => s.time2 != null && s.time2 != "" && s.time2 != '|');
+
+        return station;
     }
 
     private getEndStation(train: TrainEntity): StationEntity {

@@ -14,7 +14,7 @@ export class TrainDetailComponent implements OnInit, AfterViewInit {
   private timetable: Timetable;
   private id: number;
   private stationCode: string;
-  train: TrainEntity = { id: null, num: null, from: null, comments: null, endStation: null, isCisie: null, direction: null, line: null, stations: [] };
+  train: TrainEntity = { id: null, num: null, from: null, comments: null, startStation: null, endStation: null, isCisie: null, direction: null, line: null, stations: [] };
 
   @ViewChildren('stations') stationsQueryList: QueryList<any>;
 

@@ -11,11 +11,19 @@
     box-shadow: 0 0px 70px black;
 }
 
+.close-container .route {
+    float: left;
+    margin-left: 0.5rem;
+    font-style: italic;
+    color: darkgray;
+}
+
 .close-container a {
+    float: right;
     font-size: 2rem;
     line-height: 1.55rem;
     color: black;
-    text-shadow: -1px 1px 0px rgba(255,255,255,0.3);
+    /*text-shadow: -1px 1px 0px rgba(255,255,255,0.3);*/
     margin-right: 0.5rem;
 }
 
