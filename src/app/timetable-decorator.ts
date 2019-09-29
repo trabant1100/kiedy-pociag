@@ -52,6 +52,7 @@ export class TimetableDecorator {
             case DIRECTION.WWA:
                 return DIRECTION.WWA;
             case 'Łuków':
+            case 'Siedlce':
                 return DIRECTION.LUK;
             default:
                 throw `Unknown direction ${lastStation.name} ${train.num}`;
