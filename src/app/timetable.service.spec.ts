@@ -18,17 +18,68 @@ describe('TimetableService', () => {
   let service: TimetableService;
   let httpMock: HttpTestingController;
 
+  let duplicatesInArray = <T>(arr: T[]): T[] => {
+    return _.filter(arr, (value, index, iteratee) => _.includes(iteratee, value, index + 1));
+  }
+
   let createDate = (day: number, month: number, year: number): Date => {
     return new Date(year, month - 1, day, 12, 0, 0, 0);
   }
 
   let isTrainInNums = (t: TrainEntity, nums: string[]): boolean => {
-    return nums.includes(t.num);
+    for(let num of nums) {
+      const splitted = num.split('@');
+      if(splitted.length == 1 && t.num == num) {
+        return true;
+      } else if(t.num == splitted[0] && t.endStation.time == splitted[1]) {
+        return true;
+      }
+    }
+    return false;
   }
 
   let checkEndStation = (stationName: string, trains: TrainEntity[]) => {
     for (let train of trains) {
-      expect(train.endStation.name == stationName).toBeTruthy(`End station of train ${train.num} should be ${stationName}`);
+      expect(train.endStation.name == stationName).toBeTruthy(`End station of train ${train.num} should be ${stationName}, but was ${train.endStation.name}`);
+    }
+  }
+
+  let verifyTrainsInDirection = (tt: Timetable, specData: any, dir: DIRECTION) => {
+    tt = new TimetableDecorator(tt).DecoratedTimetable;
+    let trains = tt.trains.filter((t: TrainEntity) => t.direction == dir);
+
+    let removed = [];
+    // End stations check
+    for(let stationName in specData) {
+      removed = _.remove(trains, (t: TrainEntity) => {
+        return isTrainInNums(t, specData[stationName]);
+      });
+      let expected = specData[stationName];
+      let duplicates = duplicatesInArray(expected);
+      if(duplicates.length > 0) {
+        fail(`Duplicates in out_spec for station ${stationName}: ${duplicates}`);
+      }
+      let actual = new Set(removed.map((t: TrainEntity) => t.num));
+      checkEndStation(stationName, removed);
+      if(expected.length != actual.size) {
+        fail(`Should be ${expected.length} trains with end station ${stationName}, but were ${actual.size}`);
+        let missingTrains = _.xor(expected, Array.from(actual));
+        console.log(actual);
+        console.log(expected)
+        fail(`${stationName}: ${missingTrains}`);
+        for(let missingTrain of missingTrains) {
+          if(expected.includes(missingTrain)) {
+            fail(`Bogus train ${missingTrain} in out_spec.json`);
+          } else {
+            fail(`Bogus train ${missingTrain} in timetable`);
+          }
+        }
+      }
+    }
+
+      // Stations with no specification in out_spec.json
+    for (let t of trains) {
+      fail(`Train [${t.line}] [${t.num}] with end station ${t.endStation.name} found, but not defined in out_spec.json`);
     }
   }
 
@@ -48,81 +99,23 @@ describe('TimetableService', () => {
   it('veryfing end stations to LUK', () => {
     service.getTimetable().toPromise().then((tt: Timetable) => {
       let specDataLuk = specData['end stations to LUK'];
-      tt = new TimetableDecorator(tt).DecoratedTimetable;
-      let trains = tt.trains.filter((t: TrainEntity) => t.direction == DIRECTION.LUK);
-
-      let removed = [];
-      // End stations check
-      for(let stationName in specDataLuk) {
-        removed = _.remove(trains, (t: TrainEntity) => {
-          return isTrainInNums(t, specDataLuk[stationName]);
-        });
-        let expected = specDataLuk[stationName];
-        let actual = new Set(removed.map((t: TrainEntity) => t.num));
-        checkEndStation(stationName, removed);
-        if(expected.length != actual.size) {
-          fail(`Should be ${expected.length} trains with end station ${stationName}, but were ${actual.size}`);
-          let missingTrains = _.xor(expected, Array.from(actual));
-          console.log(actual);
-          console.log(expected)
-          fail(`${stationName}: ${missingTrains}`);
-          for(let missingTrain of missingTrains) {
-            if(expected.includes(missingTrain)) {
-              fail(`Bogus train ${missingTrain} in out_spec.json`);
-            } else {
-              fail(`Bogus train ${missingTrain} in timetable`);
-            }
-          }
-        }
-      }
-
-       // Stations with no specification in out_spec.json
-      for (let t of trains) {
-        fail(`Train [${t.line}] [${t.num}] with end station ${t.endStation.name} found, but not defined in out_spec.json`);
-      }
+      verifyTrainsInDirection(tt, specDataLuk, DIRECTION.LUK);
     });
 
     const req = httpMock.expectOne(TimetableService.API_URL);
     req.flush({ 'trains': data.trains });
   });
-/*
+
   it('veryfing end stations to WWA', () => {
     service.getTimetable().toPromise().then((tt: Timetable) => {
-      tt = new TimetableDecorator(tt).DecoratedTimetable;
-      let trains = tt.trains.filter((t: TrainEntity) => t.direction == DIRECTION.WWA);
-
-      // End station Warszawa Zachodnia
-      let removed = _.remove(trains, (t: TrainEntity) => {
-        return isTrainInNums(t, ['91850/1', '93330/1', '91852', '91890', '93450/1', '12800/1', '91230/1', '91800/1', '19442/3', '91854/5', '93940/1',
-          '91856/7', '91892', '93400/1', '93400/1', '91232/3 ŁUKOWIANKA', '91802/3', '93900/1', '91858', '93460/1', '12890/1', '93460/1', '91840/1',
-          '91804/5', '93942/3', '91860/1', '91220/1', '91806/7', '93490/1', '91862', '91808/9', '91864', '91810/1', '91866/7', '91812/3', '91868',
-          '91814/5', '91870/1', '91816/7', '12224/5', '91872', '93310/1', '93492/3', '91874', '12226/7', '93312/3', '91818/9', '91876', '93314/5',
-          '91820/1', '93944/5', '91878', '19420/1', '91234', '93316/7', '91222', '91822/3', '93946/7', '91880', '91824', '91826', '91882', '91224/5',
-          '91842/3', '91884', '91828/9', '91830/1', '91886', '91832/3', '91888', '91848/9'
-        ]);
-      });
-      checkEndStation('Warszawa Zachodnia', removed);
-
-      // End station Siedlce
-      removed = _.remove(trains, (t: TrainEntity) => {
-        return isTrainInNums(t, ['11852', '11822', '11854', '11826', '11856', '11858', '11860', '11828', '11862', '11864', '11866', '11868', '11870', '11850']);
-      });
-      checkEndStation('Siedlce', removed);
-
-      // End station Warszawa Wschodnia
-      removed = _.remove(trains, (t: TrainEntity) => {
-        return isTrainInNums(t, ['91590/1', '91250 CZEREMSZAK']);
-      });
-      checkEndStation('Warszawa Wschodnia', removed);
-
-      for (let t of trains) {
-        fail(`Train [${t.line}] [${t.num}] with end station ${t.endStation.name}`);
-      }
+      let specDataWwa = specData['end stations to WWA'];
+      verifyTrainsInDirection(tt, specDataWwa, DIRECTION.WWA);
     });
 
     const req = httpMock.expectOne(TimetableService.API_URL);
     req.flush({ 'trains': data.trains });
-  });*/
+  });
+
 /*
   it('timetable veryfing', () => {
     let timetable: Timetable;
