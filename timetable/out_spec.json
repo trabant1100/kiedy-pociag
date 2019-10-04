@@ -23,5 +23,22 @@
             "91842", "91884/5"],
         "Siedlce": ["11852", "11822", "11854", "11826", "11856", "11858", "11860", "11828", "11862", "11864", "11866", "11868", "11870", "11850"],
         "Warszawa Wschodnia": ["91250 CZEREMSZAK", "91848/9@00:09"]
+    },
+    "timetable for 15.IX - 19.X 2019": {
+        "setup": {
+            "default": {"year": 2019, "month": 10, "day": 11},
+            "saturday": 19,
+            "sunday": 13
+        },
+        "trains": [
+            {
+                "num": "19891",
+                "spec": [
+                    {"present": ["Cisie", null, "04:20"]},
+                    {"absent": "saturday"},
+                    {"comments": "C"}
+                ]
+            }
+        ]
     }
 }

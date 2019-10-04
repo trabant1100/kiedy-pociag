@@ -8,10 +8,6 @@ import { Timetable, TrainEntity, StationEntity, DIRECTION } from './timetable';
 import * as data from './../../timetable/out.json';
 import * as specData from './../../timetable/out_spec.json';
 import { TimetableDecorator } from './timetable-decorator';
-import { doesNotThrow } from 'assert';
-
-const NONWORKING_SUNDAY = [23, 9, 2019];
-const WORKING_MONDAY = [22, 9, 2019];
 
 describe('TimetableService', () => {
   let injector: TestBed;
@@ -116,28 +112,99 @@ describe('TimetableService', () => {
     req.flush({ 'trains': data.trains });
   });
 
+  let parseDateWithDefaults = (date: string|number|number[], def: Date, spec?: Object): Date => {
+    if (typeof date == 'string') {
+      if (!spec[date]) {
+        let splittedDate: number|number[] = date.split('/').map((val) => Number(val));
+        if (splittedDate.length == 1) {
+          splittedDate = splittedDate[0];
+        }
+        return parseDateWithDefaults(splittedDate, def, spec);
+      } else {
+        return spec[date];
+      }
+    } else if (typeof date == 'number') {
+      return createDate(date, def.getMonth()+1, def.getFullYear())
+    } else if (date instanceof Array) {
+      if (date.length == 2) {
+        return createDate(date[0], date[1], def.getFullYear());
+      } else if (date.length == 3) {
+        return createDate(date[0], date[1], date[2]);
+      } else {
+        throw 'Wrong date: ' + date;
+      }
+    }
+  }
+
+  let oneTrain = (timetable: Timetable, num: string, date: Date, finder: (t: TrainEntity) => boolean = (t) => true) => {
+    let dateStr = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+    let t = service.getTimetableForDate(date, timetable);
+    let found = t.trains.filter((t: TrainEntity) => t.num == num && finder(t));
+
+    expect(found!.length == 1)
+      .toBeTruthy(`Train ${num} should be present only once at ${dateStr}, but was ${found!.length} times`);
+
+    expect(found[0] != null).toBeTruthy(`Train ${num} should be present at ${dateStr}`)
+  }
+
+  let checkStationAtTime = (t: TrainEntity, stationName: string, stationTime: string): boolean => {
+    return t.stations.find((station: StationEntity) => station.name == stationName && station.time == stationTime) != null;
+  }
+
+  let noTrain = (timetable: Timetable, num: string, date: Date, finder: (t: TrainEntity) => boolean = (t) => true) => {
+    let dateStr = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+    let t = service.getTimetableForDate(date, timetable);
+
+    expect(t.trains.find((t: TrainEntity) => t.num == num && finder(t)) == null)
+      .toBeTruthy(`Train ${num} should not be present at ${dateStr}`);
+  }
+
+  let timetableSpec = specData["timetable for 15.IX - 19.X 2019"];
+  let setup = timetableSpec["setup"];
+  let defaultDate = createDate(setup.default.day, setup.default.month, setup.default.year);
+  let saturday = parseDateWithDefaults(setup.saturday, defaultDate);
+  let sunday = parseDateWithDefaults(setup.sunday, defaultDate);
+  let specialDates = {saturday, sunday};
+  let trains = timetableSpec.trains;
+
+  console.log(defaultDate);
+  console.log(saturday);
+  console.log(sunday);
+  
+  for(let train of trains) {
+    let num = train.num;
+
+    it(num, () => {
+      service.getTimetable().toPromise().then((tt: Timetable) => {
+        let presentSpec = train.spec[0].present;
+        let absentSpec = train.spec[1].absent;
+        let present = {
+          'station': presentSpec[0],
+          'date': presentSpec[1] === null ? defaultDate : parseDateWithDefaults(presentSpec[1], defaultDate),
+          'time': presentSpec[2]
+        };
+        let absent = {
+          'date': parseDateWithDefaults(absentSpec, defaultDate, specialDates)
+        }
+        let comments = train.spec[2].comments;
+    
+        oneTrain(tt, num, present.date, (t: TrainEntity) => checkStationAtTime(t, present.station, present.time));
+        noTrain(tt, num, absent.date);
+      });
+
+      const req = httpMock.expectOne(TimetableService.API_URL);
+      req.flush({ 'trains': data.trains });
+    });
+  }
+  
+
 /*
   it('timetable veryfing', () => {
     let timetable: Timetable;
 
-    let noTrain = (num: string, [day, month, year = 2019]: Array<number>, finder: (t: TrainEntity) => boolean = (t) => true) => {
-      let t = service.getTimetableForDate(createDate(day, month, year), timetable);
+    
 
-      expect(t.trains.find((t: TrainEntity) => t.num == num && finder(t)) == null).toBeTruthy(`Train ${num} should not be present at ${day}.${month}.${year}`);
-    }
-
-    let oneTrain = (num: string, [day, month, year = 2019]: Array<number>, finder: (t: TrainEntity) => boolean = (t) => true) => {
-      let t = service.getTimetableForDate(createDate(day, month, year), timetable);
-      let found = t.trains.filter((t: TrainEntity) => t.num == num && finder(t));
-
-      expect(found!.length == 1).toBeTruthy(`Train ${num} should be present only once at ${day}.${month}.${year}, but was ${found!.length} times`);
-
-      expect(found[0] != null).toBeTruthy(`Train ${num} should be present at ${day}.${month}.${year}`)
-    }
-
-    let checkStationAtTime = (t: TrainEntity, stationName: string, stationTime: string): boolean => {
-      return t.stations.find((station: StationEntity) => station.name == stationName && station.time == stationTime) != null;
-    }
+    
 
     let checkStationAtTime2 = (t: TrainEntity, stationName: string, stationTime2: string): boolean => {
       return t.stations.find((station: StationEntity) => station.name == stationName && station.time2 == stationTime2) != null;
