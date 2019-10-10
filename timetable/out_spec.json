@@ -28,7 +28,8 @@
         "setup": {
             "default": {"year": 2019, "month": 10, "day": 11},
             "saturday": 19,
-            "sunday": 13
+            "sunday": 13,
+            "day": 16
         },
         "trains": [
             {
@@ -36,6 +37,14 @@
                 "spec": [
                     {"present": ["Cisie", null, "04:20"]},
                     {"absent": "saturday"},
+                    {"comments": "C"}
+                ]
+            },
+            {
+                "num": "93851",
+                "spec": [
+                    {"present": ["Cisie", "saturday", "04:20"]},
+                    {"absent": "day"},
                     {"comments": "C"}
                 ]
             }

@@ -180,7 +180,7 @@ describe('TimetableService', () => {
         let absentSpec = train.spec[1].absent;
         let present = {
           'station': presentSpec[0],
-          'date': presentSpec[1] === null ? defaultDate : parseDateWithDefaults(presentSpec[1], defaultDate),
+          'date': presentSpec[1] === null ? defaultDate : parseDateWithDefaults(presentSpec[1], defaultDate, specialDates),
           'time': presentSpec[2]
         };
         let absent = {
@@ -196,7 +196,35 @@ describe('TimetableService', () => {
       req.flush({ 'trains': data.trains });
     });
   }
+
+  let commentedTrains = new Map<string, string[]>();
+  for(let train of trains) {
+    let specs = train.spec;
+    for(let spec of specs) {
+      if(spec.comments !== undefined) {
+        let comments = [];
+        comments.push(spec.comments);
+        for(let comment of comments) {
+          if(!commentedTrains.has(comment)) {
+            commentedTrains.set(comment, []);
+          }
+          commentedTrains.get(comment).push(train.num);
+        }
+      }
+    }
+  }
+  // commentedTrains.forEach((trainNums, comment) => {
+  //   trainNums.forEach(trainNum => {
+  //     it(trainNum, () => {
+  //       service.getTimetable().toPromise().then((tt: Timetable) => {
+          
+  //       });
   
+  //       const req = httpMock.expectOne(TimetableService.API_URL);
+  //       req.flush({ 'trains': data.trains });
+  //     });
+  //   });
+  // });
 
 /*
   it('timetable veryfing', () => {
